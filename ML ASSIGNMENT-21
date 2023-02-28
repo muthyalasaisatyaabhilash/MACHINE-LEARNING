@@ -1,0 +1,312 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "7483c106-d7a5-4f15-bd56-f7d02972b5f0",
+   "metadata": {},
+   "source": [
+    "1) What is the estimated depth of a Decision Tree trained (unrestricted) on a one million instance\n",
+    "training set?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9e970041-7688-445e-9fde-af3ed8272da1",
+   "metadata": {},
+   "source": [
+    "The estimated depth of a decision tree trained on a one million instance training set would depend on several factors such as the complexity of the problem, the number and type of features used, the amount of noise in the data, and the hyperparameters chosen for the algorithm.\n",
+    "\n",
+    "However, it is generally observed that decision trees tend to overfit the data as the depth increases, so it is common to use regularization techniques such as pruning to control the depth of the tree and avoid overfitting.\n",
+    "\n",
+    "In practice, decision trees are often used in ensemble methods such as Random Forests or Gradient Boosting, where multiple trees are combined to improve the performance and reduce overfitting.\n",
+    "\n",
+    "Therefore, it is difficult to provide a precise estimate of the depth of a decision tree without additional information about the specific problem and the algorithm used."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f130feb6-ae8c-4e20-bd4d-1599350f4ad8",
+   "metadata": {},
+   "source": [
+    "2) Is the Gini impurity of a node usually lower or higher than that of its parent? Is it always\n",
+    "lower/greater, or is it usually lower/greater?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a547c3d9-533f-4b5a-be7e-b8e25244dc76",
+   "metadata": {},
+   "source": [
+    "The Gini impurity of a node is usually lower than or equal to that of its parent. This is because the Gini impurity measure quantifies the degree of impurity or heterogeneity in the data at a given node, and splitting the data into smaller groups (i.e., creating child nodes) based on some criterion should result in subsets that are more homogeneous than the parent node.\n",
+    "\n",
+    "The Gini impurity of a node measures the probability of misclassifying a randomly chosen sample from that node, and it is calculated as the sum of the squared probabilities of each class label in the node (1 minus the sum of squared probabilities of each class label represents the Gini impurity).\n",
+    "\n",
+    "When we split a node into child nodes, we are separating the data into groups that are more homogeneous with respect to the class labels, which should result in a lower probability of misclassification and a lower Gini impurity. However, this is not always the case as the quality of a split can depend on the specific features and the algorithm used.\n",
+    "\n",
+    "Therefore, the Gini impurity of a node is usually lower or equal to that of its parent, but it is not guaranteed to always be lower.\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2db7ec57-96c6-4b1f-8993-6177648aeafc",
+   "metadata": {},
+   "source": [
+    "3) Explain if its a good idea to reduce max depth if a Decision Tree is overfitting the training set?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6ed2756a-f38c-4616-ad9f-45064b47f40c",
+   "metadata": {},
+   "source": [
+    "If a Decision Tree is overfitting the training set, reducing the maximum depth of the tree can be a good idea to improve its performance on the validation or test set. Overfitting occurs when the tree is too complex and captures the noise in the training data instead of the underlying patterns or relationships.\n",
+    "\n",
+    "By reducing the maximum depth of the tree, we limit the number of splits and the complexity of the tree, which helps to prevent it from memorizing the training data and generalize better to new data. This can improve the performance on the validation or test set and reduce the overfitting.\n",
+    "\n",
+    "However, reducing the maximum depth too much can result in underfitting, where the tree is too simple and fails to capture the underlying patterns in the data. Therefore, it is important to find an appropriate balance between the depth of the tree and its performance on the validation or test set."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fd8396b4-fd33-4219-8497-26423f56737b",
+   "metadata": {},
+   "source": [
+    "4) Explain if its a good idea to try scaling the input features if a Decision Tree underfits the training\n",
+    "set?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4bd7c6d6-877b-45e6-91af-593965db452d",
+   "metadata": {},
+   "source": [
+    "Scaling the input features may not be a good idea if a Decision Tree underfits the training set because Decision Trees are not sensitive to the scale of the input features.\n",
+    "\n",
+    "Decision Trees split the data based on a threshold value for a single feature at a time, and the scale of the feature does not affect the ordering of the values. Therefore, scaling the input features is unlikely to improve the performance of a Decision Tree that underfits the training set.\n",
+    "\n",
+    "If a Decision Tree is underfitting the training set, it may be because it is too simple and unable to capture the underlying patterns in the data. In this case, increasing the complexity of the tree by increasing the maximum depth, reducing the minimum number of samples required to split a node, or using ensemble methods such as Random Forests or Gradient Boosting may be more effective in improving the performance on the training set and reducing underfitting."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1333527c-e9cc-4653-a998-f3b7d3e8eefb",
+   "metadata": {},
+   "source": [
+    "5) How much time will it take to train another Decision Tree on a training set of 10 million instances\n",
+    "if it takes an hour to train a Decision Tree on a training set with 1 million instances?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cf6d2477-32bf-4e9c-a920-2180f46d4201",
+   "metadata": {},
+   "source": [
+    "It is difficult to estimate the exact time it will take to train another Decision Tree on a training set of 10 million instances because the time required to train a Decision Tree depends on several factors such as the complexity of the problem, the number and type of features used, the amount of noise in the data, and the hyperparameters chosen for the algorithm.\n",
+    "\n",
+    "However, we can make an estimate based on the assumption that the time required to train a Decision Tree scales linearly with the size of the training set. If it takes an hour to train a Decision Tree on a training set with 1 million instances, we can estimate that it will take approximately 10 hours to train a Decision Tree on a training set with 10 million instances.\n",
+    "\n",
+    "It is important to note that this is a rough estimate, and the actual time required to train a Decision Tree on a larger training set may vary based on the specific characteristics of the problem and the hardware used for training. Additionally, techniques such as parallel processing or distributed computing can be used to speed up the training process for large datasets.\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e62ec0c6-2189-4b17-b995-24dffc7825bd",
+   "metadata": {},
+   "source": [
+    "6) Will setting presort=True speed up training if your training set has 100,000 instances?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "32ff4ec6-0eac-4e1e-b18d-e0cf86bc796d",
+   "metadata": {},
+   "source": [
+    "Setting presort=True may not necessarily speed up training if your training set has 100,000 instances, and in fact, it could even slow down the training process.\n",
+    "\n",
+    "The presort option in scikit-learn allows the algorithm to presort the data to speed up the search for the best splits during tree building. However, presorting can be time-consuming and memory-intensive, and it is only beneficial when the number of training instances is relatively small compared to the available memory.\n",
+    "\n",
+    "For datasets with 100,000 instances, the overhead of sorting the data may outweigh the potential benefits of using presorting. In fact, the scikit-learn documentation suggests that presorting may only be useful for datasets with up to a few thousand samples.\n",
+    "\n",
+    "In general, the decision to use presort=True should be based on the specific characteristics of the dataset and the hardware used for training. It is often a good idea to compare the training times and performance of the algorithm with and without presorting to determine if it is beneficial for a particular problem."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e263da17-986b-49b6-b4e0-af24b277f014",
+   "metadata": {},
+   "source": [
+    "7. Follow these steps to train and fine-tune a Decision Tree for the moons dataset:\n",
+    "\n",
+    "a. To build a moons dataset, use make moons(n samples=10000, noise=0.4).\n",
+    "\n",
+    "b. Divide the dataset into a training and a test collection with train test split().\n",
+    "\n",
+    "c. To find good hyperparameters values for a DecisionTreeClassifier, use grid search with cross-\n",
+    "validation (with the GridSearchCV class). Try different values for max leaf nodes.\n",
+    "\n",
+    "d. Use these hyperparameters to train the model on the entire training set, and then assess its\n",
+    "output on the test set. You can achieve an accuracy of 85 to 87 percent."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5ae99d19-968c-4735-92ac-06eaec91e5b2",
+   "metadata": {},
+   "source": [
+    "Sure, here are the steps to train and fine-tune a Decision Tree for the moons dataset using scikit-learn:\n",
+    "\n",
+    "a. Load the dataset and create the moons dataset:\n",
+    "\n",
+    "python\n",
+    "Copy code\n",
+    "from sklearn.datasets import make_moons\n",
+    "X, y = make_moons(n_samples=10000, noise=0.4, random_state=42)\n",
+    "b. Split the dataset into training and testing sets:\n",
+    "\n",
+    "python\n",
+    "Copy code\n",
+    "from sklearn.model_selection import train_test_split\n",
+    "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n",
+    "c. Import the DecisionTreeClassifier class from scikit-learn and create an instance:\n",
+    "\n",
+    "python\n",
+    "Copy code\n",
+    "from sklearn.tree import DecisionTreeClassifier\n",
+    "tree_clf = DecisionTreeClassifier(random_state=42)\n",
+    "d. Define the hyperparameters for the grid search:\n",
+    "\n",
+    "python\n",
+    "Copy code\n",
+    "params = {'max_leaf_nodes': list(range(2, 100))}\n",
+    "e. Perform a grid search with cross-validation to find the best hyperparameters:\n",
+    "\n",
+    "python\n",
+    "Copy code\n",
+    "from sklearn.model_selection import GridSearchCV\n",
+    "grid_search = GridSearchCV(tree_clf, params, cv=5, scoring='accuracy')\n",
+    "grid_search.fit(X_train, y_train)\n",
+    "f. Print the best hyperparameters and the best score:\n",
+    "\n",
+    "python\n",
+    "Copy code\n",
+    "print(grid_search.best_params_)\n",
+    "print(grid_search.best_score_)\n",
+    "g. Train the Decision Tree model using the best hyperparameters and the entire training set:\n",
+    "\n",
+    "python\n",
+    "Copy code\n",
+    "best_tree_clf = grid_search.best_estimator_\n",
+    "best_tree_clf.fit(X_train, y_train)\n",
+    "h. Evaluate the performance of the model on the testing data using accuracy score:\n",
+    "\n",
+    "python\n",
+    "Copy code\n",
+    "from sklearn.metrics import accuracy_score\n",
+    "y_pred = best_tree_clf.predict(X_test)\n",
+    "accuracy_score(y_test, y_pred)\n",
+    "The accuracy score on the test set should be around 85 to 87 percent.\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "074b3b72-5764-47fc-b91e-0cc449792d63",
+   "metadata": {},
+   "source": [
+    "8) Follow these steps to grow a forest:\n",
+    "\n",
+    "a. Using the same method as before, create 1,000 subsets of the training set, each containing\n",
+    "100 instances chosen at random. You can do this with Scikit-ShuffleSplit Learn&#39;s class.\n",
+    "\n",
+    "b. Using the best hyperparameter values found in the previous exercise, train one Decision\n",
+    "Tree on each subset. On the test collection, evaluate these 1,000 Decision Trees. These Decision\n",
+    "\n",
+    "Trees would likely perform worse than the first Decision Tree, achieving only around 80% accuracy,\n",
+    "since they were trained on smaller sets.\n",
+    "\n",
+    "c. Now the magic begins. Create 1,000 Decision Tree predictions for each test set case, and\n",
+    "keep only the most common prediction (you can do this with SciPy&#39;s mode() function). Over the test\n",
+    "collection, this method gives you majority-vote predictions.\n",
+    "\n",
+    "d. On the test range, evaluate these predictions: you should achieve a slightly higher accuracy\n",
+    "than the first model (approx 0.5 to 1.5 percent higher). You&#39;ve successfully learned a Random Forest\n",
+    "classifier!"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5e9907b5-28c4-4f33-9b73-5c2becca3092",
+   "metadata": {},
+   "source": [
+    "Sure, here are the steps to grow a Random Forest classifier:\n",
+    "\n",
+    "a. Create 1,000 subsets of the training set, each containing 100 instances chosen at random:\n",
+    "\n",
+    "python\n",
+    "Copy code\n",
+    "from sklearn.model_selection import ShuffleSplit\n",
+    "n_trees = 1000\n",
+    "n_instances = 100\n",
+    "shuffle_split = ShuffleSplit(n_splits=n_trees, test_size=n_instances, random_state=42)\n",
+    "b. Train one Decision Tree on each subset using the best hyperparameters found in the previous exercise:\n",
+    "\n",
+    "python\n",
+    "Copy code\n",
+    "from sklearn.base import clone\n",
+    "forest = [clone(grid_search.best_estimator_) for _ in range(n_trees)]\n",
+    "accuracy_scores = []\n",
+    "for tree, (train_index, _) in zip(forest, shuffle_split.split(X_train)):\n",
+    "    tree.fit(X_train[train_index], y_train[train_index])\n",
+    "    y_pred = tree.predict(X_test)\n",
+    "    accuracy_scores.append(accuracy_score(y_test, y_pred))\n",
+    "mean_accuracy = np.mean(accuracy_scores)\n",
+    "print(\"Mean Accuracy:\", mean_accuracy)\n",
+    "c. Make 1,000 Decision Tree predictions for each test set instance, and keep only the most common prediction:\n",
+    "\n",
+    "python\n",
+    "Copy code\n",
+    "Y_pred = np.empty([n_trees, len(X_test)], dtype=np.uint8)\n",
+    "for tree_index, tree in enumerate(forest):\n",
+    "    Y_pred[tree_index] = tree.predict(X_test)\n",
+    "y_pred_majority_votes, n_votes = mode(Y_pred, axis=0)\n",
+    "d. Evaluate the performance of the Random Forest classifier on the test set:\n",
+    "\n",
+    "python\n",
+    "Copy code\n",
+    "accuracy_score(y_test, y_pred_majority_votes.reshape([-1]))\n",
+    "The accuracy score of the Random Forest classifier should be slightly higher than the first Decision Tree model, typically around 0.5 to 1.5 percent higher.\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3721da6d-41b3-46a7-ae28-5d9a7093e647",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "",
+   "name": ""
+  },
+  "language_info": {
+   "name": ""
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

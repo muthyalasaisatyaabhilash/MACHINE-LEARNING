@@ -1,0 +1,228 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "fa40d03a-a428-42b2-9be4-0078f4a8ce41",
+   "metadata": {},
+   "source": [
+    "1) What is prior probability? Give an example."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d930f1dc-cc6e-4bd3-9555-2c6f3bec0248",
+   "metadata": {},
+   "source": [
+    "Prior probability is a term used in probability theory and statistics to refer to the probability of an event or hypothesis before any evidence or information is taken into account. In other words, it represents what we know or assume about the probability of an event happening based on our prior knowledge or experience.\n",
+    "\n",
+    "For example, let's say that we want to calculate the probability of a person having a certain medical condition based on their age. If we have no prior information about this person, we might assume that the probability of them having the condition is equal to the prevalence rate of the condition in the general population. This prevalence rate would be our prior probability."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "14982e08-d9c8-4190-afd8-802ddc6ceff7",
+   "metadata": {},
+   "source": [
+    "2) What is posterior probability? Give an example."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6b5f4926-4848-47b6-b429-871596b33bf6",
+   "metadata": {},
+   "source": [
+    "Posterior probability is a term used in probability theory and statistics to refer to the probability of an event or hypothesis after taking into account new evidence or information. In other words, it represents the updated probability of an event happening based on new data or observations.\n",
+    "\n",
+    "For example, let's say that we want to calculate the probability of a person having a certain medical condition based on their age and the results of a diagnostic test. We start with a prior probability based on the prevalence rate of the condition in the general population, as I explained in the previous answer. If we then learn that the person tested positive for the condition, we can update our prior probability to arrive at a posterior probability that takes into account this new information.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7d9047ed-2a18-4458-96f6-1a1c313176ce",
+   "metadata": {},
+   "source": [
+    "3) What is likelihood probability? Give an example."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2cdbdf79-5e42-4e94-b949-03022d72109f",
+   "metadata": {},
+   "source": [
+    "Likelihood probability is a term used in statistics to refer to the probability of observing a certain set of data or evidence given a specific hypothesis or model. In other words, it represents how well a hypothesis or model explains the observed data.\n",
+    "\n",
+    "For example, let's say that we are trying to determine the probability of a coin being biased towards heads based on a series of coin flips. We can use the likelihood probability to calculate how well a specific hypothesis, such as \"the coin is biased towards heads\", explains the observed data.\n",
+    "\n",
+    "If we flip the coin 10 times and observe that it comes up heads 8 times, we can use the binomial distribution to calculate the probability of observing this result given different hypotheses about the coin's bias. For example, if we assume that the coin is fair (i.e., has a 50% chance of landing on heads and a 50% chance of landing on tails), the likelihood probability of observing 8 heads in 10 flips would be:\n",
+    "\n",
+    "P(8 heads in 10 flips | fair coin) = 0.0439"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "628489d8-e18b-4a95-8642-e924574d9bc9",
+   "metadata": {},
+   "source": [
+    "4) What is Naïve Bayes classifier? Why is it named so?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "edf27e43-c203-4d62-82d8-2c4def9fb5f6",
+   "metadata": {},
+   "source": [
+    "Naive Bayes classifier is a probabilistic machine learning algorithm used for classification tasks, such as email spam filtering, sentiment analysis, or image classification. It is based on Bayes' theorem, which describes the probability of an event or hypothesis given evidence or data. The \"naive\" part of the name refers to the assumption that the features or variables used in the model are independent of each other, which simplifies the calculation of the probabilities.\n",
+    "\n",
+    "Naive Bayes classifier works by calculating the posterior probability of a data point belonging to a particular class given its feature values. This probability is calculated as the product of the prior probability of the class (based on the frequency of the class in the training data) and the conditional probability of each feature value given the class. The assumption of independence between the features allows us to calculate the conditional probabilities of each feature value independently, and then multiply them together."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1276db7a-b466-484c-b62a-9e9c891eeecc",
+   "metadata": {},
+   "source": [
+    "5) What is optimal Bayes classifier?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fe5bea4b-e369-4f87-acc2-16d5a215e6cd",
+   "metadata": {},
+   "source": [
+    "Optimal Bayes classifier is a probabilistic machine learning algorithm that aims to classify data points based on the class with the highest posterior probability, given the data and prior probabilities of the classes. It is considered \"optimal\" because it achieves the lowest possible classification error rate among all possible classifiers, given the assumptions made about the data and the class conditional probability distributions.\n",
+    "\n",
+    "Unlike the Naive Bayes classifier, which assumes independence between the features and calculates the conditional probabilities independently, the optimal Bayes classifier uses the full joint distribution of the feature values and the class labels to calculate the posterior probabilities. This allows it to take into account any correlations between the features and to model more complex relationships between the features and the classes.\n",
+    "\n",
+    "To classify a new data point using the optimal Bayes classifier, we calculate the posterior probability of each class given the data using Bayes' theorem:\n",
+    "\n",
+    "P(class | data) = P(data | class) * P(class) / P(data)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c20f4ce5-69d5-41d6-b9f1-e0b5386b1355",
+   "metadata": {},
+   "source": [
+    "6) Write any two features of Bayesian learning methods."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1c12fd08-fce5-46df-a721-b18677ba6759",
+   "metadata": {},
+   "source": [
+    "Here are two features of Bayesian learning methods:\n",
+    "\n",
+    "1) Probabilistic approach: Bayesian learning methods use a probabilistic approach to model uncertainty and incorporate prior knowledge about the data into the model. This allows the model to update its beliefs about the data as new evidence is observed, leading to more robust and accurate predictions.\n",
+    "\n",
+    "2) Regularization: Bayesian learning methods use regularization techniques to prevent overfitting and improve generalization performance. This is achieved by adding a prior distribution over the model parameters, which acts as a form of regularization and biases the model towards simpler solutions that are more likely to generalize well to new data. The choice of prior distribution can also be used to encode domain-specific knowledge or preferences about the model parameters."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1d65e5f2-4ce9-49e3-9473-7b47fcd119cd",
+   "metadata": {},
+   "source": [
+    "7) Define the concept of consistent learners."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d8fdc6f1-2fc9-4107-a316-4ed600415777",
+   "metadata": {},
+   "source": [
+    "In machine learning, a consistent learner is a type of learning algorithm that converges to the true target function as the amount of training data approaches infinity. More formally, a learner is said to be consistent if, given any true target function and any distribution over the input space, the learner's hypothesis function approaches the true target function with high probability as the number of training examples increases.\n",
+    "\n",
+    "Consistent learners are desirable because they ensure that the model's predictions will be accurate and reliable, even when faced with previously unseen data. This property is particularly important in applications where the model is expected to perform well in the long term, such as in medical diagnosis or financial forecasting."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bd8ce518-aded-41ab-9b85-9bbf36ddfd9b",
+   "metadata": {},
+   "source": [
+    "8) Write any two strengths of Bayes classifier."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e5f42e98-563c-48b1-ace5-64784c400f56",
+   "metadata": {},
+   "source": [
+    "Here are two strengths of Bayes classifier:\n",
+    "\n",
+    "a) Simplicity and efficiency: Bayes classifier is a relatively simple and efficient algorithm that can handle large datasets with high-dimensional feature spaces. It requires only a small amount of training data compared to other machine learning algorithms, and can be trained quickly using standard optimization techniques. The simplicity of the algorithm also makes it easy to understand and interpret the results.\n",
+    "\n",
+    "b) Robustness to irrelevant features: Bayes classifier is known to be robust to irrelevant features, meaning that it can still perform well even when some of the features are not informative or redundant. This is because the classifier uses the joint distribution of all the features and the classes, rather than considering each feature independently. This allows the classifier to ignore irrelevant features and focus on the ones that are most predictive of the class labels. This property makes Bayes classifier particularly useful in applications where the feature space is high-dimensional or noisy."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "216b0493-9845-421c-81b4-a8489a36bb52",
+   "metadata": {},
+   "source": [
+    "9) Write any two weaknesses of Bayes classifier."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5c49c478-ed33-46fc-a82f-417acf16e22b",
+   "metadata": {},
+   "source": [
+    "Here are two weaknesses of Bayes classifier:\n",
+    "\n",
+    "1) Strong independence assumption: Bayes classifier assumes that the features are conditionally independent given the class label, which is often not true in practice. This can lead to suboptimal performance if there are strong correlations or dependencies between the features. While there are extensions of the Bayes classifier that relax this assumption, they can be computationally expensive or difficult to implement.\n",
+    "\n",
+    "2) Sensitivity to the prior distribution: Bayes classifier is sensitive to the choice of prior distribution, which can have a significant impact on the posterior probabilities and the resulting classifications. If the prior distribution is not well-suited to the problem or is too strongly biased towards certain classes, the classifier may not perform well. Selecting an appropriate prior distribution can be challenging and often requires domain-specific knowledge or experimentation. However, in some cases, it may be possible to learn the prior distribution from the data itself using techniques such as maximum likelihood estimation or Bayesian model selection."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "50da9d85-f170-4331-81b3-d81b21ace247",
+   "metadata": {},
+   "source": [
+    "10) Explain how Naïve Bayes classifier is used for\n",
+    "\n",
+    "1. Text classification\n",
+    "\n",
+    "2. Spam filtering\n",
+    "\n",
+    "3. Market sentiment analysis "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "70fa45e5-7ecf-4d18-b514-0f55071a28cc",
+   "metadata": {},
+   "source": [
+    "Here's how Naïve Bayes classifier is used for text classification, spam filtering, and market sentiment analysis:\n",
+    "\n",
+    "1) Text classification: Naïve Bayes classifier is a popular algorithm for text classification tasks, such as sentiment analysis, topic modeling, and spam detection. In text classification, the classifier is trained on a set of labeled documents and learns the conditional probability distribution of each word given the class label. \n",
+    "\n",
+    "2) Spam filtering: Naïve Bayes classifier is a common algorithm used for spam filtering in email and messaging systems. In this context, the classifier is trained on a set of labeled emails, where the class label indicates whether the email is spam or not. \n",
+    "\n",
+    "3) Market sentiment analysis: Naïve Bayes classifier is also used in market sentiment analysis to predict the sentiment of financial news articles or social media posts related to a particular stock or market. The classifier is trained on a set of labeled documents, where the class label indicates the sentiment of the document (e.g., positive, negative, or neutral). \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c7d3f565-f98b-4805-ac4b-57bacc7977ad",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "",
+   "name": ""
+  },
+  "language_info": {
+   "name": ""
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

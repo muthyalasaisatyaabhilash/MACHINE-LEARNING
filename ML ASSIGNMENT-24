@@ -1,0 +1,222 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "f426ad0c-85db-40e8-9867-2706d34c655a",
+   "metadata": {},
+   "source": [
+    "1) What is your definition of clustering? What are a few clustering algorithms you might think of?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1f6f33a7-139e-4cef-a487-1536a086a0c7",
+   "metadata": {},
+   "source": [
+    "Clustering is a type of unsupervised machine learning algorithm that involves grouping similar data points into clusters or subgroups based on their inherent characteristics or features. The goal of clustering is to identify natural groupings in the data that may not be immediately apparent or easily discernible.\n",
+    "\n",
+    "There are several clustering algorithms available, each with its own strengths and weaknesses. Some common clustering algorithms include:\n",
+    "\n",
+    "a) K-Means Clustering: This algorithm divides the data into k clusters by minimizing the sum of squared distances between each data point and the centroid of its assigned cluster.\n",
+    "\n",
+    "b) Hierarchical Clustering: This algorithm builds a tree-like structure of nested clusters by iteratively merging or splitting clusters based on their similarity.\n",
+    "\n",
+    "c) Density-Based Spatial Clustering of Applications with Noise (DBSCAN): This algorithm groups data points based on their density in the feature space, with low-density regions treated as noise.\n",
+    "\n",
+    "d) Expectation-Maximization (EM) Algorithm: This algorithm is used for Gaussian Mixture Model (GMM) clustering, which assumes that the data points are generated from a mixture of Gaussian distributions."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bfbc90a7-e96c-48bc-b5ff-f36f1e3e3b83",
+   "metadata": {},
+   "source": [
+    "2) What are some of the most popular clustering algorithm applications? "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a4b810a1-297b-4e15-ab25-c7e67053bd08",
+   "metadata": {},
+   "source": [
+    "Clustering algorithms can be applied to a wide range of problems across various domains. Here are some popular clustering algorithm applications:\n",
+    "\n",
+    "a) Market Segmentation: Clustering algorithms can be used to identify groups of customers with similar preferences, behavior, or demographics, which can then be targeted with specific marketing campaigns.\n",
+    "\n",
+    "b) Image Segmentation: Clustering algorithms can be used to group similar pixels in an image into regions, which can then be used for object recognition, image compression, or other applications.\n",
+    "\n",
+    "c) Anomaly Detection: Clustering algorithms can be used to identify unusual or anomalous data points that do not belong to any of the clusters.\n",
+    "\n",
+    "d) Recommendation Systems: Clustering algorithms can be used to group similar items or users based on their preferences or behavior, which can then be used to make personalized recommendations."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d0db21f3-327b-4715-aba8-c3a2e508acc0",
+   "metadata": {},
+   "source": [
+    "3) When using K-Means, describe two strategies for selecting the appropriate number of clusters."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "72914526-c722-4efe-89de-a2f4d6acfc5e",
+   "metadata": {},
+   "source": [
+    "Selecting the appropriate number of clusters in K-Means is an important and challenging task. Here are two common strategies for selecting the number of clusters in K-Means:\n",
+    "\n",
+    "1)Elbow Method: The elbow method involves plotting the within-cluster sum of squares (WCSS) against the number of clusters and identifying the \"elbow\" point where the rate of decrease in WCSS starts to level off. This method suggests that the appropriate number of clusters is where the decrease in WCSS begins to level off, indicating that additional clusters do not provide significant improvements in clustering performance.\n",
+    "\n",
+    "2)Silhouette Method: The silhouette method involves calculating the silhouette score for each data point, which measures how well each point belongs to its assigned cluster compared to other clusters. The overall silhouette score for the clustering solution is then calculated by taking the mean of the silhouette scores for all points. This process is repeated for different numbers of clusters, and the appropriate number of clusters is the one that maximizes the overall silhouette score. A higher silhouette score indicates that the clusters are well-separated and the points within each cluster are similar to each other, while a lower silhouette score indicates that the clusters are overlapping or poorly separated."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "920b9e92-6873-4fa9-8c57-dfabe22eb14d",
+   "metadata": {},
+   "source": [
+    "4) What is mark propagation and how does it work? Why would you do it, and how would you do it?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "23651cfe-f42b-42cf-bd23-76f3fc2896db",
+   "metadata": {},
+   "source": [
+    "Mark propagation is a semi-supervised machine learning technique that involves propagating known labels (or \"marks\") to unlabeled data points in a graph or network. The idea behind mark propagation is that data points that are close to each other in the graph are likely to have similar labels, even if their labels are initially unknown.\n",
+    "\n",
+    "Mark propagation works by iteratively updating the labels of the data points in the graph based on the labels of their neighbors. The process starts with assigning known labels to a subset of the data points (called \"seeds\"), and then propagating these labels to the remaining data points based on their similarity to the seed points. Specifically, the algorithm computes the similarity between each data point and its neighbors (based on some similarity metric, such as Euclidean distance or cosine similarity) and assigns the data point a label based on the majority label of its neighbors.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "777a794b-5d6a-4389-b54c-1fbe3e8aa804",
+   "metadata": {},
+   "source": [
+    "5) Provide two examples of clustering algorithms that can handle large datasets. And two that look\n",
+    "for high-density areas?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9d52a473-1da5-492d-b2fc-66366c357095",
+   "metadata": {},
+   "source": [
+    "Two examples of clustering algorithms that can handle large datasets are:\n",
+    "\n",
+    "a) Mini-batch K-Means: This is a variant of K-Means that randomly samples subsets (or \"batches\") of the data to perform the clustering, rather than using the entire dataset. This can make the algorithm significantly faster and more memory-efficient, making it well-suited for large datasets. However, this approach may result in slightly lower clustering accuracy compared to the standard K-Means algorithm.\n",
+    "\n",
+    "b) DBSCAN: This is a density-based clustering algorithm that can handle large datasets with arbitrary shapes and sizes. DBSCAN works by identifying high-density regions in the data and grouping together points that belong to the same region. Because it does not require a priori specification of the number of clusters, it can handle datasets with unknown or varying numbers of clusters.\n",
+    "\n",
+    "Two examples of clustering algorithms that look for high-density areas are:\n",
+    "\n",
+    "1) Mean Shift: This is a density-based clustering algorithm that works by iteratively shifting a kernel density estimate towards areas of higher data density. As the kernel is shifted, it attracts nearby data points, which gradually coalesce into clusters around high-density areas. This approach can be very effective at identifying clusters with arbitrary shapes and sizes.\n",
+    "\n",
+    "2) OPTICS: This is another density-based clustering algorithm that identifies clusters by building a reachability graph of the data points based on their density and proximity. The reachability graph allows for the detection of clusters of varying density and shape, and can also identify noise points and outliers. OPTICS can handle datasets with unknown or varying densities, making it well-suited for applications where the density of the data varies significantly."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "04d19424-fc94-4485-97fe-a075d26e16b5",
+   "metadata": {},
+   "source": [
+    "6) Can you think of a scenario in which constructive learning will be advantageous? How can you go\n",
+    "about putting it into action?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8b2ca386-44fd-45d3-b7b8-6b472998d4aa",
+   "metadata": {},
+   "source": [
+    "Constructive learning is a type of machine learning approach in which the learner incrementally builds a model by actively selecting and processing new data samples that are most informative for improving the model. In other words, the learner actively seeks out new data that can help refine its current model, rather than simply processing a fixed dataset.\n",
+    "\n",
+    "A scenario in which constructive learning may be advantageous is in an online setting, where new data is continuously being generated and the model needs to be updated in real-time. For example, in an e-commerce website, the model used for recommending products to users may need to be updated frequently as new products are added and user preferences change. Constructive learning can be useful in this scenario because it allows the model to be updated incrementally and continuously, without the need to retrain the entire model from scratch every time new data is available.\n",
+    "\n",
+    "To put constructive learning into action, one approach is to use an active learning framework. This involves selecting a subset of the available data that is most informative for improving the model, based on some selection criteria (such as uncertainty sampling, diversity sampling, or information density sampling). The selected data is then labeled and used to update the model, which is re-evaluated on a validation set to assess its performance."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f1551922-59cc-4ec3-a5af-a5bbc9b7e1a2",
+   "metadata": {},
+   "source": [
+    "7) How do you tell the difference between anomaly and novelty detection? "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "97f9aea5-cf6d-4ae8-b7f2-548130ebc15c",
+   "metadata": {},
+   "source": [
+    "Anomaly detection and novelty detection are two related but distinct machine learning tasks that involve identifying abnormal or unusual instances in a dataset. The main difference between the two lies in the nature of the abnormal instances being detected.\n",
+    "\n",
+    "Anomaly detection is the task of identifying instances that deviate significantly from the expected or normal behavior of the data. Anomalies can be caused by errors, outliers, or unexpected events, and they may or may not have a specific pattern or structure. Anomaly detection is often used for fraud detection, network intrusion detection, or fault diagnosis.\n",
+    "\n",
+    "Novelty detection, on the other hand, is the task of identifying instances that are significantly different from the ones seen during training, but that are not necessarily abnormal or unwanted. Novelties can represent new or previously unseen types of data, or simply data points that are different from the ones encountered in the training set. Novelty detection is often used for anomaly detection, but it can also be used for tasks such as object recognition or recommender systems."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "97375073-737f-4593-8d87-31961e607023",
+   "metadata": {},
+   "source": [
+    "8) What is a Gaussian mixture, and how does it work? What are some of the things you can do about\n",
+    "it?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2075d1a8-740b-4027-b228-269ee2648b5b",
+   "metadata": {},
+   "source": [
+    "A Gaussian mixture is a probabilistic model that represents a probability distribution as a weighted sum of multiple Gaussian distributions. In other words, it is a mixture of several Gaussian distributions, each with its own mean and covariance matrix. The model assumes that the data is generated by first selecting one of the Gaussian components according to some probability distribution, and then generating a data point from that selected component.\n",
+    "\n",
+    "The Gaussian mixture model is often used for clustering, density estimation, and generative modeling. To fit a Gaussian mixture model to a dataset, the algorithm estimates the parameters of the individual Gaussian components (i.e., the mean and covariance matrix) and the weights of each component (i.e., the probability of selecting each component). This is typically done using an iterative algorithm such as expectation-maximization (EM), which alternates between estimating the component parameters and the weights, until convergence is reached.\n",
+    "\n",
+    "One of the main advantages of the Gaussian mixture model is its flexibility in modeling complex probability distributions, including those with multiple peaks and irregular shapes. Additionally, the model can capture correlations and dependencies between different dimensions of the data, which can be useful for tasks such as anomaly detection or generative modeling."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "63011a98-42f7-4adc-af2b-e87367d4c480",
+   "metadata": {},
+   "source": [
+    "9) When using a Gaussian mixture model, can you name two techniques for determining the correct\n",
+    "number of clusters?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2f8b54a2-dfac-42f1-9704-c4e36423bd90",
+   "metadata": {},
+   "source": [
+    "Yes, here are two common techniques for determining the correct number of clusters when using a Gaussian mixture model:\n",
+    "\n",
+    "1) Akaike information criterion (AIC): AIC is a model selection criterion that balances the trade-off between model complexity and goodness of fit. It is calculated as AIC = -2log(L) + 2k, where L is the likelihood of the data given the model and k is the number of parameters in the model. The idea behind AIC is to penalize models with more parameters, which can overfit the data, while favoring models that provide a good fit to the data. To use AIC for selecting the number of clusters in a Gaussian mixture model, one would fit a series of models with increasing numbers of components and choose the model with the lowest AIC value.\n",
+    "\n",
+    "2) Bayesian information criterion (BIC): BIC is similar to AIC, but places a stronger penalty on model complexity. It is calculated as BIC = -2log(L) + klog(n), where n is the number of data points. The penalty term in BIC grows as the number of data points increases, which means that BIC tends to favor simpler models than AIC. To use BIC for selecting the number of clusters in a Gaussian mixture model, one would fit a series of models with increasing numbers of components and choose the model with the lowest BIC value."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "20748001-58ae-4f38-a0dd-dfed9c22c6f7",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "",
+   "name": ""
+  },
+  "language_info": {
+   "name": ""
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

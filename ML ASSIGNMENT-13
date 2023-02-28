@@ -1,0 +1,378 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "b4fb2b39-ff02-4fe7-8f49-3852db2d9844",
+   "metadata": {},
+   "source": [
+    "1) Provide an example of the concepts of Prior, Posterior, and Likelihood."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "18e0fa6d-4801-4615-9006-82fe0af10b56",
+   "metadata": {},
+   "source": [
+    "Sure, here's an example that illustrates the concepts of prior, posterior, and likelihood:\n",
+    "\n",
+    "Let's say you are trying to predict whether it will rain tomorrow. You have some historical data on weather patterns in your area, which tells you that it rains on about 30% of days in your area.\n",
+    "\n",
+    "Prior: The prior is your belief about the probability of rain before you observe any new data. In this case, your prior belief is that the probability of rain is 0.3 (or 30%) based on historical data.\n",
+    "\n",
+    "Posterior: The posterior is your updated belief about the probability of rain after you observe new data. Let's say you check the weather forecast and it says that there's a 50% chance of rain tomorrow. You can update your prior belief using Bayes' theorem to get the posterior probability:\n",
+    "\n",
+    "Posterior probability = (Likelihood x Prior) / Evidence\n",
+    "\n",
+    "where:\n",
+    "\n",
+    "Likelihood: The likelihood is the probability of observing the new data (50% chance of rain) given a certain hypothesis (that it will rain tomorrow). In this case, the likelihood is 0.5 if it rains tomorrow and 0.5 if it doesn't rain tomorrow.\n",
+    "\n",
+    "Prior: The prior is your belief about the probability of rain before you observe any new data (0.3).\n",
+    "Evidence: The evidence is the probability of observing the new data (50% chance of rain) regardless of whether it rains or not. In this case, the evidence is the sum of the probabilities of observing the new data given that it rains and given that it doesn't rain:\n",
+    "Evidence = (Likelihood of rain x Prior of rain) + (Likelihood of no rain x Prior of no rain)\n",
+    "Evidence = (0.5 x 0.3) + (0.5 x 0.7) = 0.5\n",
+    "\n",
+    "So, the posterior probability of rain given the new data is:\n",
+    "\n",
+    "Posterior probability = (0.5 x 0.3) / 0.5 = 0.3\n",
+    "\n",
+    "This means that even though the weather forecast predicts a 50% chance of rain, your updated belief about the probability of rain is still 0.3 based on historical data.\n",
+    "\n",
+    "Likelihood: The likelihood is the probability of observing the new data (50% chance of rain) given a certain hypothesis (that it will rain tomorrow). In this case, the likelihood is 0.5 if it rains tomorrow and 0.5 if it doesn't rain tomorrow.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7dbd7c59-5785-457e-aae2-fd62f7749d01",
+   "metadata": {},
+   "source": [
+    "2) What role does Bayes&#39; theorem play in the concept learning principle?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bd73d06a-204c-40f2-93c4-64b15d16c529",
+   "metadata": {},
+   "source": [
+    "Bayes' theorem plays a central role in the concept learning principle because it provides a way to update our beliefs about the probability of a hypothesis (i.e., a concept) based on new evidence.\n",
+    "\n",
+    "The concept learning principle involves the process of learning new concepts or categories by making observations and generalizations based on those observations. When we encounter new data, we use Bayes' theorem to update our beliefs about the probability of different hypotheses (i.e., concepts or categories) based on the observed data. In other words, we use Bayes' theorem to update our prior probabilities (our initial beliefs about the probabilities of different hypotheses) to posterior probabilities (our updated beliefs about the probabilities of different hypotheses after taking into account the observed data)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "34d1201c-c5ba-415b-acd2-ff3004137d29",
+   "metadata": {},
+   "source": [
+    "3) Offer an example of how the Nave Bayes classifier is used in real life. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "49fb15aa-94f7-4cd0-a0a5-199c8de46fdd",
+   "metadata": {},
+   "source": [
+    "One real-life example of how the Naive Bayes classifier is used is in email spam detection.\n",
+    "\n",
+    "Email spam detection is an important task in the field of email security. Naive Bayes classifiers can be used to classify incoming emails as either spam or not spam (ham). The classifier is trained on a dataset of pre-labeled emails, where each email is labeled as either spam or ham.\n",
+    "\n",
+    "The Naive Bayes classifier uses the probabilities of the presence or absence of certain keywords or phrases in the email to determine whether the email is spam or ham. For example, if an email contains words like \"Viagra\" or \"Nigerian prince,\" it is more likely to be classified as spam. On the other hand, if an email contains words like \"work\" or \"meeting,\" it is more likely to be classified as ham.\n",
+    "\n",
+    "Once the Naive Bayes classifier has been trained, it can be used to classify new incoming emails in real-time, based on the presence or absence of certain keywords or phrases in the email. This helps to filter out unwanted spam emails, reducing the risk of phishing attacks, malware, and other cyber threats."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0d549cb3-4c58-4c33-84a2-4d84c65153c7",
+   "metadata": {},
+   "source": [
+    "4) Can the Nave Bayes classifier be used on continuous numeric data? If so, how can you go about\n",
+    "doing it?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fb6f8324-a0bb-476f-a90f-37fe341f15a0",
+   "metadata": {},
+   "source": [
+    "Yes, the Naive Bayes classifier can be used on continuous numeric data. However, it requires a modification to the standard Naive Bayes algorithm, which assumes that the features are categorical or binary.\n",
+    "\n",
+    "One way to use Naive Bayes with continuous data is to discretize the continuous variables into discrete bins. This can be done using various techniques, such as equal width binning or equal frequency binning. The data is then treated as categorical or binary, and the standard Naive Bayes algorithm can be applied.\n",
+    "\n",
+    "Alternatively, a Gaussian Naive Bayes classifier can be used. In this approach, instead of discretizing the data, the algorithm models the probability distribution of each feature as a Gaussian (normal) distribution. This involves estimating the mean and variance of each feature for each class label."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "25227c0e-7133-48db-ac74-b8fcac40dd83",
+   "metadata": {},
+   "source": [
+    "5) What are Bayesian Belief Networks, and how do they work? What are their applications? Are they\n",
+    "capable of resolving a wide range of issues?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8a75c72d-3190-47c6-999f-9343fe860512",
+   "metadata": {},
+   "source": [
+    "Bayesian Belief Networks (BBNs), also known as Bayesian networks or graphical models, are a type of probabilistic graphical model that represents the relationships between variables and their probabilities.\n",
+    "\n",
+    "A BBN consists of a directed acyclic graph (DAG), where nodes represent variables and edges represent the conditional dependencies between variables. Each node in the graph is associated with a conditional probability table (CPT), which describes the probability of that variable given its parents.\n",
+    "\n",
+    "To use a BBN, one starts with a set of observations (evidence) and computes the probability of other variables of interest (queries) using Bayes' theorem and the structure and CPTs of the network. The BBN provides a systematic way to propagate uncertainties and to reason about the joint probability distribution of a set of variables.\n",
+    "\n",
+    "BBNs have a wide range of applications, including decision-making under uncertainty, risk analysis, diagnosis, prediction, and causal inference. They are used in fields such as medicine, finance, engineering, and artificial intelligence.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dab49feb-45b4-4f99-89b3-1453c6c538bf",
+   "metadata": {},
+   "source": [
+    "6) Passengers are checked in an airport screening system to see if there is an intruder. Let I be the\n",
+    "random variable that indicates whether someone is an intruder I = 1) or not I = 0), and A be the\n",
+    "variable that indicates alarm I = 0). If an intruder is detected with probability P(A = 1|I = 1) = 0.98\n",
+    "and a non-intruder is detected with probability P(A = 1|I = 0) = 0.001, an alarm will be triggered,\n",
+    "implying the error factor. The likelihood of an intruder in the passenger population is P(I = 1) =\n",
+    "0.00001. What are the chances that an alarm would be triggered when an individual is actually an\n",
+    "intruder?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c036fab9-db82-4b38-b9e9-21d2663da007",
+   "metadata": {},
+   "source": [
+    "We are given:\n",
+    "\n",
+    "P(A=1|I=1) = 0.98, the probability of an alarm being triggered given that an individual is an intruder.\n",
+    "P(A=1|I=0) = 0.001, the probability of an alarm being triggered given that an individual is not an intruder.\n",
+    "P(I=1) = 0.00001, the probability of an individual being an intruder.\n",
+    "We want to find the probability of an alarm being triggered given that an individual is actually an intruder, P(I=1|A=1). We can use Bayes' theorem to compute this probability:\n",
+    "\n",
+    "P(I=1|A=1) = P(A=1|I=1) * P(I=1) / P(A=1)\n",
+    "\n",
+    "To compute P(A=1), we can use the law of total probability:\n",
+    "\n",
+    "P(A=1) = P(A=1|I=1) * P(I=1) + P(A=1|I=0) * P(I=0)\n",
+    "\n",
+    "Substituting the values we are given, we get:\n",
+    "\n",
+    "P(A=1) = 0.98 * 0.00001 + 0.001 * (1 - 0.00001) = 0.0010098\n",
+    "\n",
+    "Now, we can substitute the values of P(A=1|I=1), P(I=1), and P(A=1) into Bayes' theorem to get:\n",
+    "\n",
+    "P(I=1|A=1) = 0.98 * 0.00001 / 0.0010098 ≈ 0.0097\n",
+    "\n",
+    "Therefore, the probability of an alarm being triggered given that an individual is actually an intruder is approximately 0.0097, or 0.97%. This means that even if an alarm is triggered, there is a low chance that the individual is actually an intruder. This highlights the importance of using additional screening methods and techniques to verify whether an individual is a potential threat.\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "083071e2-0150-4732-9c77-a6105c9eeb65",
+   "metadata": {},
+   "source": [
+    "7) An antibiotic resistance test (random variable T) has 1% false positives (i.e., 1% of those who are\n",
+    "not immune to an antibiotic display a positive result in the test) and 5% false negatives (i.e., 1% of\n",
+    "those who are not resistant to an antibiotic show a positive result in the test) (i.e. 5 percent of those\n",
+    "actually resistant to an antibiotic test negative). Assume that 2% of those who were screened were\n",
+    "antibiotic-resistant. Calculate the likelihood that a person who tests positive is actually immune\n",
+    "(random variable D)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "72a00c82-8973-4dbe-86f0-3956dae3f90f",
+   "metadata": {},
+   "source": [
+    "We are given:\n",
+    "\n",
+    "P(T=1|D=0) = 0.01, the probability of a positive test result given that a person is not immune.\n",
+    "P(T=0|D=1) = 0.05, the probability of a negative test result given that a person is immune.\n",
+    "P(D=1) = 0.02, the probability of a person being immune.\n",
+    "We want to find the probability that a person is immune given that they test positive, P(D=1|T=1).\n",
+    "\n",
+    "We can use Bayes' theorem to compute this probability:\n",
+    "\n",
+    "P(D=1|T=1) = P(T=1|D=1) * P(D=1) / P(T=1)\n",
+    "\n",
+    "To compute P(T=1), we can use the law of total probability:\n",
+    "\n",
+    "P(T=1) = P(T=1|D=1) * P(D=1) + P(T=1|D=0) * P(D=0)\n",
+    "\n",
+    "Substituting the values we are given, we get:\n",
+    "\n",
+    "P(T=1) = 0.05 * 0.02 + 0.01 * (1 - 0.02) = 0.0106\n",
+    "\n",
+    "Now, we can substitute the values of P(T=1|D=1), P(D=1), and P(T=1) into Bayes' theorem to get:\n",
+    "\n",
+    "P(D=1|T=1) = 0.05 * 0.02 / 0.0106 ≈ 0.0943\n",
+    "\n",
+    "Therefore, the likelihood that a person who tests positive is actually immune is approximately 0.0943, or 9.43%. This means that there is a relatively low probability that a person who tests positive is actually immune to the antibiotic, even though the false positive rate is only 1%. This highlights the importance of considering both false positives and false negatives when interpreting diagnostic test results.\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cf4e757b-1a2d-4284-864e-a9e53d989a26",
+   "metadata": {},
+   "source": [
+    "8) In order to prepare for the test, a student knows that there will be one question in the exam that\n",
+    "is either form A, B, or C. The chances of getting an A, B, or C on the exam are 30 percent, 20%, and\n",
+    "50 percent, respectively. During the planning, the student solved 9 of 10 type A problems, 2 of 10\n",
+    "type B problems, and 6 of 10 type C problems.\n",
+    "\n",
+    "1. What is the likelihood that the student can solve the exam problem?\n",
+    "\n",
+    "2. Given the student&#39;s solution, what is the likelihood that the problem was of form A?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "41588400-fda2-4df3-a0ec-c3e90ae26374",
+   "metadata": {},
+   "source": [
+    "1) To compute the likelihood that the student can solve the exam problem, we need to use the law of total probability. Let S be the event that the student can solve the problem, and let P be the event that the problem is of form A, B, or C with probabilities 0.3, 0.2, and 0.5, respectively. Then we have:\n",
+    "P(S) = P(S|A) * P(A) + P(S|B) * P(B) + P(S|C) * P(C)\n",
+    "\n",
+    "From the problem statement, we know that:\n",
+    "\n",
+    "P(S|A) = 9/10, the probability of solving a type A problem\n",
+    "P(S|B) = 2/10, the probability of solving a type B problem\n",
+    "P(S|C) = 6/10, the probability of solving a type C problem\n",
+    "Substituting these values and the probabilities of each type of problem, we get:\n",
+    "\n",
+    "P(S) = (9/10) * 0.3 + (2/10) * 0.2 + (6/10) * 0.5 = 0.6\n",
+    "\n",
+    "Therefore, the likelihood that the student can solve the exam problem is 0.6, or 60%.\n",
+    "\n",
+    "2) To compute the likelihood that the problem was of form A given the student's solution, we can use Bayes' theorem:\n",
+    "P(A|S) = P(S|A) * P(A) / P(S)\n",
+    "\n",
+    "From part 1, we know that P(S) = 0.6. From the problem statement, we know that P(A) = 0.3 and P(S|A) = 9/10. Substituting these values, we get:\n",
+    "\n",
+    "P(A|S) = (9/10) * 0.3 / 0.6 = 0.45\n",
+    "\n",
+    "Therefore, the likelihood that the problem was of form A given the student's solution is 0.45, or 45%. This means that even though the student is more likely to solve a type A problem, there is still less than a 50% chance that the problem was actually of form A given the student's solution.\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "00805644-fb26-4084-a9ff-c31b2e899622",
+   "metadata": {},
+   "source": [
+    "9) A bank installs a CCTV system to track and photograph incoming customers. Despite the constant\n",
+    "influx of customers, we divide the timeline into 5 minute bins. There may be a customer coming into\n",
+    "the bank with a 5% chance in each 5-minute time period, or there may be no customer (again, for\n",
+    "simplicity, we assume that either there is 1 customer or none, not the case of multiple customers). If\n",
+    "\n",
+    "there is a client, the CCTV will detect them with a 99 percent probability. If there is no customer, the\n",
+    "camera can take a false photograph with a 10% chance of detecting movement from other objects.\n",
+    "\n",
+    "1. How many customers come into the bank on a daily basis (10 hours)?\n",
+    "\n",
+    "2. On a daily basis, how many fake photographs (photographs taken when there is no\n",
+    "customer) and how many missed photographs (photographs taken when there is a customer) are\n",
+    "there?\n",
+    "\n",
+    "3. Explain likelihood that there is a customer if there is a photograph?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "da05354f-bd84-45cf-a0bf-fbf9f57eaddb",
+   "metadata": {},
+   "source": [
+    "There are 10 hours in a day, which is equal to 600 minutes. Dividing this by 5-minute bins gives us 120 time intervals. In each interval, there is a 5% chance of a customer coming in. Therefore, the expected number of customers in a day is:\n",
+    "\n",
+    "120 time intervals * 5% chance of customer = 6 customers per day\n",
+    "\n",
+    "To calculate the expected number of fake and missed photographs, we need to consider each 5-minute interval separately. In each interval, there can either be a customer or not, and the camera can either correctly detect the customer or take a false photograph.\n",
+    "\n",
+    "For intervals where there is a customer, the camera will detect them with 99% probability, so the expected number of missed photographs is:\n",
+    "\n",
+    "120 time intervals * 5% chance of customer * (1 - 0.99) = 0.6 missed photographs per day\n",
+    "\n",
+    "For intervals where there is no customer, the camera will take a false photograph with a 10% chance, so the expected number of false photographs is:\n",
+    "\n",
+    "120 time intervals * (1 - 5% chance of customer) * 10% chance of false photograph = 1.2 false photographs per day\n",
+    "\n",
+    "Given a photograph, we want to calculate the likelihood that there is a customer in the bank. Using Bayes' theorem:\n",
+    "\n",
+    "P(customer | photograph) = P(photograph | customer) * P(customer) / P(photograph)\n",
+    "\n",
+    "We know that P(photograph | customer) = 0.99 (the probability of the camera detecting the customer), P(customer) = 5% (the probability of a customer being in the bank), and P(photograph) can be calculated using the law of total probability:\n",
+    "\n",
+    "P(photograph) = P(photograph | customer) * P(customer) + P(photograph | no customer) * P(no customer)\n",
+    "\n",
+    "P(photograph | no customer) = 10% (the probability of a false photograph when there is no customer), and P(no customer) = 1 - P(customer) = 95% (the probability of no customer being in the bank).\n",
+    "\n",
+    "So,\n",
+    "\n",
+    "P(photograph) = 0.99 * 5% + 10% * 95% = 9.55%\n",
+    "\n",
+    "Plugging all these values in the above equation:\n",
+    "\n",
+    "P(customer | photograph) = 0.99 * 5% / 9.55% = 5.19%\n",
+    "\n",
+    "Therefore, the likelihood that there is a customer in the bank given a photograph is approximately 5.19%."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7c075c5a-b371-4776-b535-2868f22bbbe7",
+   "metadata": {},
+   "source": [
+    "10) Create the conditional probability table associated with the node Won Toss in the Bayesian Belief\n",
+    "network to represent the conditional independence assumptions of the Nave Bayes classifier for the\n",
+    "match winning prediction problem in Section 6.4.4."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9eec474a-250a-4268-9c4f-837363d489a0",
+   "metadata": {},
+   "source": [
+    "The conditional probability table (CPT) associated with the node Won Toss in the Bayesian Belief Network (BBN) for the match winning prediction problem in Section 6.4.4 would be:\n",
+    "\n",
+    "Outcome \tP(Won Toss = Outcome | Outcome of the Match)\n",
+    "Yes\t            P(Won Toss = Yes | Won Match = Yes)\n",
+    "No\t            P(Won Toss = No | Won Match = Yes)\n",
+    "Yes\t            P(Won Toss = Yes | Won Match = No)\n",
+    "No\t            P(Won Toss = No | Won Match = No)\n",
+    "\n",
+    "The assumption made by the Naive Bayes classifier is that the outcome of the match is conditionally independent of the toss, given the result of the toss. Therefore, the probabilities in the CPT for Won Toss are calculated based on the frequencies of the toss outcomes in the training data, independently of the outcomes of the match."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "70ec7868-ee28-459d-98eb-9a9a90d198f2",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "",
+   "name": ""
+  },
+  "language_info": {
+   "name": ""
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

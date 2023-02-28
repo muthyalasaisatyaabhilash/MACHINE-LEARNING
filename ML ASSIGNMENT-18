@@ -1,0 +1,287 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "68b876b0-3060-40cb-a9d7-e321d20dede8",
+   "metadata": {},
+   "source": [
+    "1) What is the difference between supervised and unsupervised learning? Give some examples to\n",
+    "illustrate your point."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b607f39a-2e8c-4f39-89d9-c14e90044b54",
+   "metadata": {},
+   "source": [
+    "Supervised learning and unsupervised learning are two major types of machine learning techniques.\n",
+    "\n",
+    "Supervised learning is a type of learning where the algorithm is trained using labeled data. The input data is paired with its corresponding output or target variable. The algorithm is trained on this data to learn how to predict the output for new inputs. The goal of supervised learning is to learn a mapping function that can predict the output variable based on the input variables.\n",
+    "\n",
+    "Example: A classic example of supervised learning is a spam filter for emails. The algorithm is trained on a labeled dataset of emails, where each email is labeled as spam or not spam. The algorithm learns to distinguish between the two categories and can predict whether a new email is spam or not.\n",
+    "\n",
+    "Unsupervised learning, on the other hand, is a type of learning where the algorithm is trained on unlabeled data. The algorithm learns to identify patterns and relationships in the data without any prior knowledge of the output or target variable. The goal of unsupervised learning is to discover the underlying structure in the data.\n",
+    "\n",
+    "Example: An example of unsupervised learning is clustering. In clustering, the algorithm groups together similar data points into clusters. For instance, the algorithm can be trained on a dataset of customer purchase histories and group customers based on their purchasing behavior. This can help businesses identify customer segments and tailor their marketing strategies accordingly.\n",
+    "\n",
+    "In summary, supervised learning is used when the output variable is known, while unsupervised learning is used when the output variable is unknown.\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0abc35fd-78f2-45fc-b566-6b5db779dd8d",
+   "metadata": {},
+   "source": [
+    "2) Mention a few unsupervised learning applications."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "96abb3a0-908e-4490-8a8c-3244b1d1b175",
+   "metadata": {},
+   "source": [
+    "Unsupervised learning is a powerful machine learning technique that is widely used in a variety of applications. Here are some examples of unsupervised learning applications:\n",
+    "\n",
+    "1) Clustering: Clustering is a technique in which an algorithm groups similar data points into clusters based on their similarity. It is used in a variety of applications such as image segmentation, customer segmentation, and anomaly detection.\n",
+    "\n",
+    "2) Dimensionality reduction: Dimensionality reduction is the process of reducing the number of features or variables in a dataset. It is used to simplify the dataset, improve computational efficiency, and improve the performance of machine learning algorithms. Principal Component Analysis (PCA) and t-distributed Stochastic Neighbor Embedding (t-SNE) are popular dimensionality reduction techniques.\n",
+    "\n",
+    "3) Generative models: Generative models are unsupervised learning algorithms that learn to generate new data that is similar to the input data. They are used in a variety of applications such as image generation, text generation, and speech synthesis."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3e126e4e-bd83-4a68-b485-65d26924f927",
+   "metadata": {},
+   "source": [
+    "3) What are the three main types of clustering methods? Briefly describe the characteristics of each."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3fefb3c9-76e8-4a0c-8925-d8716e0ae181",
+   "metadata": {},
+   "source": [
+    "The three main types of clustering methods are hierarchical clustering, partitioning clustering, and density-based clustering. Here is a brief description of each:\n",
+    "\n",
+    "1) Hierarchical clustering: Hierarchical clustering is a method that creates a hierarchy of clusters. It starts with each data point as a separate cluster and then merges them into larger clusters until all the data points belong to a single cluster. It can be further divided into two types: agglomerative clustering and divisive clustering. Agglomerative clustering starts with each data point as a separate cluster and then merges them into larger clusters, whereas divisive clustering starts with all the data points in a single cluster and then splits them into smaller clusters. The output of hierarchical clustering is usually presented in a dendrogram, which shows the hierarchical relationship between the clusters.\n",
+    "\n",
+    "2) Partitioning clustering: Partitioning clustering is a method that divides the data points into non-overlapping clusters. It assigns each data point to a cluster such that the sum of the distances between the data points and their assigned cluster centroid is minimized. The most popular partitioning clustering algorithm is K-means clustering, which partitions the data points into K clusters based on the mean value of the data points in each cluster.\n",
+    "\n",
+    "3) Density-based clustering: Density-based clustering is a method that identifies regions of high density in the data and separates them from regions of low density. It groups together data points that are close to each other and have a high density of other data points around them. The most popular density-based clustering algorithm is DBSCAN (Density-Based Spatial Clustering of Applications with Noise), which groups together data points that are close to each other and have a high density of other data points around them."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5a13b82a-041e-4642-a4c5-12f71f801ab9",
+   "metadata": {},
+   "source": [
+    "4) Explain how the k-means algorithm determines the consistency of clustering."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4b336b16-26e1-46d9-8efa-62ae2d17364e",
+   "metadata": {},
+   "source": [
+    "The k-means algorithm is a popular clustering algorithm that aims to partition a given dataset into k clusters, where k is a user-specified number. The algorithm works by iteratively optimizing the clustering objective, which is to minimize the sum of squared distances between the data points and their assigned cluster centroids.\n",
+    "\n",
+    "The k-means algorithm determines the consistency of clustering by calculating the within-cluster sum of squared errors (SSE) for each cluster. The within-cluster SSE is the sum of squared distances between each data point in a cluster and its assigned cluster centroid. The lower the within-cluster SSE, the more consistent the clustering is.\n",
+    "\n",
+    "After assigning the data points to their initial clusters, the k-means algorithm updates the cluster centroids to minimize the within-cluster SSE. It then reassigns the data points to the nearest cluster centroid and repeats this process until the clustering objective converges or a maximum number of iterations is reached."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9b36fd5e-b466-4f22-b42e-b39f4752b0e9",
+   "metadata": {},
+   "source": [
+    "5) With a simple illustration, explain the key difference between the k-means and k-medoids\n",
+    "algorithms."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4de366b7-fb12-4863-8822-085df561a360",
+   "metadata": {},
+   "source": [
+    "The key difference between the k-means and k-medoids algorithms is how they choose the cluster centroids. In k-means, the cluster centroid is the mean of all the data points assigned to that cluster, while in k-medoids, the cluster centroid is one of the data points assigned to that cluster.\n",
+    "\n",
+    "To illustrate this difference, let's consider a simple example of a dataset with five data points:\n",
+    "\n",
+    "Data points: A(1,1), B(2,3), C(3,3), D(4,5), E(5,4)\n",
+    "\n",
+    "Suppose we want to cluster these data points into two clusters using the k-means and k-medoids algorithms, with k=2. Here's how the two algorithms work:\n",
+    "\n",
+    "K-means:\n",
+    "\n",
+    "Randomly select two initial cluster centroids: C1=(1,1) and C2=(5,4)\n",
+    "Assign each data point to the nearest centroid:\n",
+    "A, B, C are assigned to C1\n",
+    "D, E are assigned to C2\n",
+    "Update the centroids by calculating the mean of the data points in each cluster:\n",
+    "C1=(2,2.33)\n",
+    "C2=(4.5,4.5)\n",
+    "Reassign the data points to the nearest centroid:\n",
+    "A, B, C are still assigned to C1\n",
+    "D, E are still assigned to C2\n",
+    "Update the centroids again:\n",
+    "C1=(2,2.33)\n",
+    "C2=(4.5,4.5)\n",
+    "The algorithm converges, and the final clusters are:\n",
+    "Cluster 1: A(1,1), B(2,3), C(3,3)\n",
+    "Cluster 2: D(4,5), E(5,4)\n",
+    "K-medoids:\n",
+    "\n",
+    "Randomly select two initial cluster medoids: M1=B(2,3) and M2=D(4,5)\n",
+    "Assign each data point to the nearest medoid:\n",
+    "A, B, C are assigned to M1\n",
+    "D, E are assigned to M2\n",
+    "Swap M1 with each data point in its cluster, and select the swap that results in the lowest total distance:\n",
+    "Swap B with A: total distance = 4.33\n",
+    "Swap B with C: total distance = 3.83\n",
+    "Keep M1=B\n",
+    "Swap M2 with each data point in its cluster, and select the swap that results in the lowest total distance:\n",
+    "Swap D with E: total distance = 1.41\n",
+    "Keep M2=D\n",
+    "The algorithm converges, and the final clusters are:\n",
+    "Cluster 1: A(1,1), B(2,3), C(3,3)\n",
+    "Cluster 2: D(4,5), E(5,4)\n",
+    "As we can see, the k-means algorithm updates the cluster centroids by calculating the mean of the data points in each cluster, while the k-medoids algorithm updates the cluster medoids by selecting one of the data points in each cluster. The choice of centroid or medoid affects the robustness of the algorithm to outliers and the convergence of the algorithm to the global minimum.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e5f40278-e233-421f-be82-87dd38cb59c1",
+   "metadata": {},
+   "source": [
+    "6) What is a dendrogram, and how does it work? Explain how to do it."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b9923b36-dd03-4069-bfc2-06ab1dd56e2b",
+   "metadata": {},
+   "source": [
+    "A dendrogram is a diagram that represents the hierarchical clustering of a dataset. It displays the relationships between the different clusters in a tree-like structure, with the branches of the tree representing the clusters and the height of the branches indicating the distance between the clusters.\n",
+    "\n",
+    "Dendrograms are commonly used in unsupervised learning, particularly in hierarchical clustering, which is a type of clustering that organizes the data into nested clusters. Hierarchical clustering can be either agglomerative or divisive. In agglomerative clustering, each data point starts as its own cluster, and pairs of clusters are successively merged based on a similarity measure, until a single cluster containing all data points is formed. Divisive clustering starts with all data points in a single cluster and recursively splits the cluster into smaller ones.\n",
+    "\n",
+    "Here are the steps to construct a dendrogram:\n",
+    "\n",
+    "Compute the pairwise distances between all data points using a distance metric, such as Euclidean distance or cosine similarity.\n",
+    "Construct a linkage matrix that specifies the distance and merging order of the clusters. The linkage matrix can be computed using different methods, such as single linkage, complete linkage, or average linkage.\n",
+    "Convert the linkage matrix into a dendrogram using a plotting library, such as Matplotlib or Seaborn."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f4668342-5ba7-472d-b8f3-ba499a6c91f8",
+   "metadata": {},
+   "source": [
+    "7) What exactly is SSE? What role does it play in the k-means algorithm?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "37870505-16c0-48e9-9e5c-439a93127fc7",
+   "metadata": {},
+   "source": [
+    "SSE stands for Sum of Squared Errors, which is a measure of the within-cluster variation or the dispersion of data points around the centroid in k-means clustering. It is calculated by summing the squared Euclidean distances between each data point and its assigned cluster centroid.\n",
+    "\n",
+    "In the k-means algorithm, the objective is to minimize the SSE by finding the best possible partition of the data into k clusters. The algorithm starts by randomly assigning k initial centroids to the data points and then iteratively updates the centroids and reassigns the data points to the closest centroid until convergence.\n",
+    "\n",
+    "At each iteration, the SSE is calculated to evaluate the quality of the current clustering. A lower SSE indicates that the data points are more tightly clustered around their centroids, whereas a higher SSE indicates that the clusters are more spread out. The k-means algorithm aims to minimize the SSE by optimizing the position of the centroids and the assignment of data points to the centroids."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "461fc418-308e-4c52-b67f-14a3d2076e1d",
+   "metadata": {},
+   "source": [
+    "8) With a step-by-step algorithm, explain the k-means procedure."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e5cac522-801b-4a30-962f-044a4767a787",
+   "metadata": {},
+   "source": [
+    "The k-means algorithm is a widely used clustering algorithm that partitions a given dataset into k clusters. Here is a step-by-step procedure for implementing the k-means algorithm:\n",
+    "\n",
+    "1) Initialize k centroids: Randomly select k data points from the dataset as the initial centroids. These centroids will represent the center of each cluster.\n",
+    "\n",
+    "2) Assign data points to the nearest centroid: For each data point, calculate its distance to each centroid and assign it to the nearest centroid. This forms k clusters.\n",
+    "\n",
+    "3) Update centroids: Calculate the mean of all data points in each cluster and update the corresponding centroid to be the mean value. This step ensures that the centroid is at the center of its assigned cluster.\n",
+    "\n",
+    "4) Repeat steps 2 and 3 until convergence: Repeat steps 2 and 3 until the centroids no longer move significantly. This means that the algorithm has converged, and the clusters are stable.\n",
+    "\n",
+    "5) Output the final clusters: The final result of the k-means algorithm is the k clusters that were generated in the previous step."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e9a411ff-d962-407c-baea-c73fa5001c39",
+   "metadata": {},
+   "source": [
+    "9) In the sense of hierarchical clustering, define the terms single link and complete link."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "04845332-8ba9-4a33-8c81-2361114c0efd",
+   "metadata": {},
+   "source": [
+    "Single-link and complete-link are two common methods for measuring the distance between clusters in hierarchical clustering.\n",
+    "\n",
+    "In single-link (also known as the nearest-neighbor) clustering, the distance between two clusters is defined as the minimum distance between any pair of data points from the two clusters. That is, the distance between cluster A and cluster B is equal to the distance between the closest pair of data points from cluster A and cluster B. Single-link clustering tends to create long, string-like clusters.\n",
+    "\n",
+    "In complete-link (also known as the farthest-neighbor) clustering, the distance between two clusters is defined as the maximum distance between any pair of data points from the two clusters. That is, the distance between cluster A and cluster B is equal to the distance between the farthest pair of data points from cluster A and cluster B. Complete-link clustering tends to create compact, spherical clusters."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "65d5806a-b7a2-4d5d-bff0-4425914468d2",
+   "metadata": {},
+   "source": [
+    "10) How does the apriori concept aid in the reduction of measurement overhead in a business\n",
+    "basket analysis? Give an example to demonstrate your point."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "72e14196-7ae4-43ac-b4e4-951288f710ac",
+   "metadata": {},
+   "source": [
+    "The Apriori algorithm is a data mining technique that is commonly used for market basket analysis. The main idea behind the Apriori algorithm is to identify frequent itemsets (sets of items that frequently appear together in transactions) and use them to generate association rules (if a customer buys item A, they are likely to buy item B as well).\n",
+    "\n",
+    "The Apriori algorithm can aid in the reduction of measurement overhead in business basket analysis by using a heuristic approach to focus only on itemsets that are likely to be frequent. The algorithm uses the Apriori principle, which states that any subset of a frequent itemset must also be frequent. This principle allows the algorithm to prune the search space by eliminating itemsets that are unlikely to be frequent, reducing the measurement overhead required to find frequent itemsets.\n",
+    "\n",
+    "For example, consider a supermarket that wants to analyze the shopping baskets of its customers to find out which items are often purchased together. The supermarket has a database of transactions, each of which contains a list of items purchased by a customer in a single transaction."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2aaa187a-7ce4-4bd4-9f39-1d82ab1ad64a",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "",
+   "name": ""
+  },
+  "language_info": {
+   "name": ""
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

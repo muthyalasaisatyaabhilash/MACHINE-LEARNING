@@ -1,0 +1,298 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "2366d4bc-f1d0-437a-811b-6ebc1017673d",
+   "metadata": {},
+   "source": [
+    "1) What exactly is a feature? Give an example to illustrate your point."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b7a2dc56-6a9b-4736-811c-f01cb95df80b",
+   "metadata": {},
+   "source": [
+    "In the context of data analysis and machine learning, a feature is an individual measurable property or characteristic of a phenomenon being observed. Features are used to represent the phenomenon in a quantitative form that can be processed by algorithms and models.\n",
+    "\n",
+    "For example, in a dataset of houses that are being sold, some of the features that might be included are:\n",
+    "\n",
+    "Square footage: the size of the house in square feet\n",
+    "Number of bedrooms: the number of bedrooms in the house\n",
+    "Number of bathrooms: the number of bathrooms in the house\n",
+    "Lot size: the size of the property on which the house is located\n",
+    "Year built: the year the house was constructed\n",
+    "Neighborhood: the location of the house in a particular neighborhood"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "22544c91-aa8e-44af-89c1-413a02f351ee",
+   "metadata": {},
+   "source": [
+    "2) What are the various circumstances in which feature construction is required?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a20004c6-679c-40f3-b24f-06520d935d46",
+   "metadata": {},
+   "source": [
+    "Feature construction or feature engineering is the process of creating new features from the existing ones in a dataset. It is a crucial step in data analysis and machine learning, as it can significantly improve the performance of models and the accuracy of predictions. Here are some of the circumstances in which feature construction is required:\n",
+    "\n",
+    "a) Insufficient or irrelevant features: If the existing features in a dataset do not provide enough information or are not relevant to the prediction task, then new features need to be created to improve the model's performance.\n",
+    "\n",
+    "b) Non-numeric data: Machine learning models typically require numeric data as input. If the dataset contains non-numeric data, such as text or categorical variables, then new features need to be constructed to represent this data in a numeric form.\n",
+    "\n",
+    "c) Interaction between features: Sometimes the interaction between two or more features can provide more predictive power than each feature alone. For example, if we have two features representing the length and width of a rectangle, then a new feature representing the area (length x width) could be more informative than either of the individual features alone.\n",
+    "\n",
+    "d)Feature scaling: In some cases, the range of values for different features in a dataset may vary widely. Feature scaling is a technique used to normalize the range of values for different features, which can improve the performance of some machine learning algorithms.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3ea2d20e-460d-471f-9c7a-6dfe24752188",
+   "metadata": {},
+   "source": [
+    "3) Describe how nominal variables are encoded."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bd3bc399-a1dc-4eba-9d17-894a80885bcb",
+   "metadata": {},
+   "source": [
+    "Nominal variables are categorical variables that have no inherent order or numerical value. Examples of nominal variables include gender, race, occupation, and country of origin. In order to use these variables in a machine learning model, they must be encoded into a numerical form. There are several techniques for encoding nominal variables, including:\n",
+    "\n",
+    "1) One-Hot Encoding: One-hot encoding is a popular technique for encoding nominal variables. In this technique, each unique value of the nominal variable is represented as a binary vector. The vector has a length equal to the number of unique values, and each element is either 0 or 1, indicating whether the value is present or not. For example, if we have a nominal variable \"color\" with three possible values (\"red\", \"green\", and \"blue\"), we would represent each value as a vector: \"red\" = [1, 0, 0], \"green\" = [0, 1, 0], and \"blue\" = [0, 0, 1]. One-hot encoding creates new features for each unique value of the nominal variable, which can lead to a high-dimensional feature space if there are many unique values.\n",
+    "\n",
+    "2) Label Encoding: Label encoding is a technique in which each unique value of the nominal variable is assigned a unique integer code. For example, if we have a nominal variable \"gender\" with two possible values (\"male\" and \"female\"), we could assign \"male\" a code of 0 and \"female\" a code of 1. Label encoding creates a single feature for the nominal variable, but it assumes an inherent order to the values, which may not be appropriate for all nominal variables.\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "003449dd-e9cf-421f-8b12-3518a0b55cd8",
+   "metadata": {},
+   "source": [
+    "4) Describe how numeric features are converted to categorical features."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1000b926-2fc7-40cc-be97-6df75e4faab1",
+   "metadata": {},
+   "source": [
+    "There are several techniques for converting numeric features to categorical features:\n",
+    "\n",
+    "a) Equal Width Binning: In equal width binning, the range of the numeric variable is divided into a fixed number of intervals or bins of equal width. The values falling within each bin are then assigned to the corresponding category. For example, if we have a numeric variable representing age with a range of 0 to 100, and we want to group it into five categories, we could create bins of width 20, with the first bin representing ages 0-19, the second bin representing ages 20-39, and so on.\n",
+    "\n",
+    "b) Equal Frequency Binning: In equal frequency binning, the range of the numeric variable is divided into a fixed number of intervals or bins, such that each bin contains approximately the same number of observations. The values falling within each bin are then assigned to the corresponding category. For example, if we have a numeric variable representing income, we could group it into five categories, such that each category contains approximately the same number of individuals with different income levels.\n",
+    "\n",
+    "c) Clustering: In clustering, the values of the numeric variable are grouped into categories based on their similarity or distance from one another. This technique is more complex and requires more advanced algorithms, such as k-means clustering, to group the values into categories.\n",
+    "\n",
+    "d) Once the numeric feature is converted to a categorical feature, it can be encoded using one of the techniques mentioned earlier, such as one-hot encoding, label encoding, or binary encoding. The choice of encoding technique depends on the specific dataset and the requirements of the machine learning model being used."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "66547555-2d90-41cb-a2b6-40e68e318f6d",
+   "metadata": {},
+   "source": [
+    "5) Describe the feature selection wrapper approach. State the advantages and disadvantages of this\n",
+    "approach?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "686082bb-ceb7-46ea-8bfc-47e9304ce1ed",
+   "metadata": {},
+   "source": [
+    "The wrapper approach involves the following steps:\n",
+    "\n",
+    "1) Generate a set of candidate feature subsets\n",
+    "2) Train a machine learning model on each feature subset\n",
+    "3) Evaluate the performance of each model on a validation set\n",
+    "\n",
+    "The advantages of the wrapper approach include:\n",
+    "\n",
+    "a) The wrapper approach is a powerful feature selection technique, as it considers the interaction between the features and the machine learning model. It is able to identify the subset of features that are most relevant for the specific problem at hand.\n",
+    "b) The wrapper approach can be applied to any machine learning model, as it is not model-specific.\n",
+    "c) The wrapper approach can handle any type of feature, including continuous, categorical, and text features.\n",
+    "\n",
+    "The disadvantages of the wrapper approach include:\n",
+    "\n",
+    "a) The wrapper approach can be computationally expensive, as it requires training and evaluating multiple machine learning models on different subsets of features.\n",
+    "b) The wrapper approach can result in overfitting if the number of candidate feature subsets is too large, as the performance on the validation set may not generalize to new data.\n",
+    "c) The wrapper approach may miss important features that interact with other features in complex ways, as it considers the features only in isolation.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "13f8ac19-b2aa-4f7d-a74b-71b9ea4efd16",
+   "metadata": {},
+   "source": [
+    "6) When is a feature considered irrelevant? What can be said to quantify it?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4e71b7fd-f84e-4917-8c25-0a36abc7cb02",
+   "metadata": {},
+   "source": [
+    "A feature is considered irrelevant if it does not provide any useful information or signal for the machine learning model to learn from. In other words, if the feature does not have a strong relationship with the target variable, then it is likely irrelevant.\n",
+    "\n",
+    "One way to quantify the relevance of a feature is to calculate its correlation with the target variable. Correlation is a statistical measure of the strength of the relationship between two variables. If the correlation between a feature and the target variable is close to zero, then the feature is likely irrelevant. On the other hand, if the correlation is strong and positive or negative, then the feature is likely relevant.\n",
+    "\n",
+    "Another way to quantify the relevance of a feature is to use a feature selection algorithm, such as a filter or wrapper approach. These algorithms can evaluate the importance of each feature in the context of the specific machine learning problem, and select only the most relevant features."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "643bd561-ad90-46f5-a7df-3ac72bbd574f",
+   "metadata": {},
+   "source": [
+    "7) When is a function considered redundant? What criteria are used to identify features that could\n",
+    "be redundant?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "30ec6d07-123f-4cb7-8539-372460b6120a",
+   "metadata": {},
+   "source": [
+    "A function is considered redundant if it does not provide any additional information or signal beyond what is already captured by other features in the dataset. In other words, if the function is highly correlated with another feature or set of features, then it may be redundant.\n",
+    "\n",
+    "One way to identify features that could be redundant is to calculate the correlation matrix between all pairs of features in the dataset. If two or more features have a high correlation coefficient (e.g., greater than 0.8 or 0.9), then it is likely that they are redundant. In this case, it may be beneficial to remove one of the redundant features to reduce the dimensionality of the dataset and improve the performance of the machine learning model.\n",
+    "\n",
+    "Another way to identify redundant features is to use a feature selection algorithm, such as a wrapper or filter approach. These algorithms can evaluate the importance of each feature in the context of the specific machine learning problem and select only the most relevant features. If two or more features have similar importance scores, it may indicate that they are redundant and one of them can be removed."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5b1616fc-fe4f-4f4c-89cc-b98e1aac373a",
+   "metadata": {},
+   "source": [
+    "8) What are the various distance measurements used to determine feature similarity?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e6f24023-5647-4754-94d1-aedfb2bf8d30",
+   "metadata": {},
+   "source": [
+    "Distance measurements are used to determine the similarity or dissimilarity between two features in a dataset. Some common distance measurements used to determine feature similarity include:\n",
+    "\n",
+    "a) Euclidean distance: This is the most common distance measurement and is calculated as the square root of the sum of the squared differences between corresponding elements of two features.\n",
+    "\n",
+    "b) Manhattan distance: This is also known as the city block distance and is calculated as the sum of the absolute differences between corresponding elements of two features.\n",
+    "\n",
+    "c) Cosine distance: This is a measure of the angle between two feature vectors in a high-dimensional space and is calculated as the cosine of the angle between them.\n",
+    "\n",
+    "d)Jaccard distance: This is a measure of similarity between two sets of data and is calculated as the ratio of the size of the intersection of the two sets to the size of the union of the two sets."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6ee800a8-cb1f-4634-bf6b-7055f177c609",
+   "metadata": {},
+   "source": [
+    "9) State difference between Euclidean and Manhattan distances?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d04186d2-0e50-4c69-ac94-41fbc41b9cf3",
+   "metadata": {},
+   "source": [
+    "Euclidean distance and Manhattan distance are both distance measurements used to determine the similarity or dissimilarity between two features in a dataset. The main differences between Euclidean and Manhattan distances are as follows:\n",
+    "\n",
+    "a) Calculation: Euclidean distance is calculated as the square root of the sum of the squared differences between corresponding elements of two features, while Manhattan distance is calculated as the sum of the absolute differences between corresponding elements of two features.\n",
+    "\n",
+    "b) Sensitivity to outliers: Euclidean distance is more sensitive to outliers than Manhattan distance. This is because Euclidean distance takes into account the square of the differences between corresponding elements, which amplifies the effect of outliers, while Manhattan distance only takes into account the absolute differences, which reduces the effect of outliers.\n",
+    "\n",
+    "c) Interpretation: Euclidean distance can be interpreted as the length of a straight line between two points in a high-dimensional space, while Manhattan distance can be interpreted as the distance a taxi would travel to go from one point to another in a city block."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e1058be4-b947-45d8-aadb-c76b748f4071",
+   "metadata": {},
+   "source": [
+    "10) Distinguish between feature transformation and feature selection."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ada43e00-1a8e-4136-9585-22d30113d685",
+   "metadata": {},
+   "source": [
+    "Feature transformation and feature selection are both techniques used to preprocess and prepare features for machine learning models, but they are different in their approach and purpose.\n",
+    "\n",
+    "Feature transformation involves modifying or transforming the existing features in a dataset to create new, more informative features that can better represent the underlying patterns and relationships in the data. Feature transformation can be achieved using various mathematical techniques such as normalization, standardization, logarithmic transformation, polynomial transformation, and principal component analysis (PCA). The goal of feature transformation is to reduce noise, improve accuracy, and increase the efficiency of the machine learning model.\n",
+    "\n",
+    "On the other hand, feature selection involves selecting a subset of the existing features in a dataset that are most relevant to the machine learning problem at hand. Feature selection can be achieved using various techniques such as filter methods, wrapper methods, and embedded methods. The goal of feature selection is to reduce the dimensionality of the dataset, improve the generalization of the machine learning model, and reduce the risk of overfitting."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b76b4659-bb91-4274-9ee9-2065c52978ec",
+   "metadata": {},
+   "source": [
+    "11) Make brief notes on any two of the following:\n",
+    "\n",
+    "1.SVD (Standard Variable Diameter Diameter)\n",
+    "\n",
+    "2. Collection of features using a hybrid approach\n",
+    "\n",
+    "3. The width of the silhouette\n",
+    "\n",
+    "4. Receiver operating characteristic curve"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0f3fdef7-a639-440f-88b6-e44ac6f66f0f",
+   "metadata": {},
+   "source": [
+    "1) SVD (Standard Variable Diameter Diameter):\n",
+    "SVD or Singular Value Decomposition is a matrix factorization technique that can be used for dimensionality reduction, feature extraction, and noise reduction. It decomposes a matrix into three matrices, namely the left singular matrix, the singular value matrix, and the right singular matrix. The singular values in the singular value matrix represent the variance or information content of the corresponding columns or features in the original matrix. SVD can be used to reduce the dimensionality of a high-dimensional dataset by retaining only the most important features or principal components.\n",
+    "\n",
+    "2) Collection of features using a hybrid approach:\n",
+    "Collection of features using a hybrid approach involves combining multiple feature selection or extraction techniques to create a robust and informative feature set. This approach can be useful in situations where a single feature selection or extraction technique may not be sufficient to capture all the relevant information in the dataset. The hybrid approach can involve using both filter and wrapper methods or combining multiple wrapper methods such as recursive feature elimination (RFE) and genetic algorithms (GA). The goal of this approach is to create a feature set that is highly relevant, informative, and robust to noise and other artifacts.\n",
+    "\n",
+    "3) The width of the silhouette:\n",
+    "The width of the silhouette is a measure of cluster quality or cluster compactness and separation. It is calculated as the difference between the mean distance of a data point to other data points in its own cluster and the mean distance of the data point to data points in the nearest neighboring cluster. A high silhouette width indicates that the data point is well-clustered and has a high degree of similarity to other data points in its own cluster, while also being dissimilar to data points in neighboring clusters. The width of the silhouette is commonly used in clustering algorithms to evaluate the quality of the resulting clusters and to select the optimal number of clusters.\n",
+    "\n",
+    "4) Receiver Operating Characteristic (ROC) curve:\n",
+    "ROC curve is a graphical representation of the performance of a binary classifier algorithm. It plots the true positive rate (TPR) against the false positive rate (FPR) for different classification thresholds. The TPR represents the proportion of actual positive cases that are correctly identified as positive by the classifier, while the FPR represents the proportion of negative cases that are incorrectly identified as positive by the classifier. A good classifier will have a high TPR and a low FPR, which results in an ROC curve that is closer to the upper left corner of the plot. The area under the ROC curve (AUC) is a measure of the overall performance of the classifier, with an AUC of 1 indicating a perfect classifier and an AUC of 0.5 indicating a random classifier.\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6493152d-53b2-4ed1-893f-a6e54f530f72",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "",
+   "name": ""
+  },
+  "language_info": {
+   "name": ""
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

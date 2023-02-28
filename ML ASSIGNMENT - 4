@@ -1,0 +1,272 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "08feea2c-2583-4d76-a21c-441b8b80a607",
+   "metadata": {},
+   "source": [
+    "1) What are the key tasks involved in getting ready to work with machine learning modeling?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a73fa6f8-af65-47b4-8d8d-a60da9db0e60",
+   "metadata": {},
+   "source": [
+    "Getting ready to work with machine learning modeling involves a series of important tasks that must be undertaken to ensure that the project is successful. Some of the key tasks involved include:\n",
+    "\n",
+    "a) Data collection: The first step is to identify the data that will be used to train the model. This data can come from a variety of sources, including public datasets, proprietary databases, or scraped web data.\n",
+    "\n",
+    "b) Data cleaning and preprocessing: Once the data has been collected, it will need to be cleaned and preprocessed to ensure that it is in the correct format and that any missing values or outliers have been handled appropriately.\n",
+    "\n",
+    "c) Feature engineering: Feature engineering involves selecting and transforming the most relevant features in the dataset to maximize the model's predictive power. This step requires a deep understanding of the data and the problem at hand."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "022e2f83-bb65-4ac1-9260-beb33aac20fd",
+   "metadata": {},
+   "source": [
+    "2) What are the different forms of data used in machine learning? Give a specific example for each of\n",
+    "them."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cf47cf0b-c961-478c-b483-d2c64e54e5a2",
+   "metadata": {},
+   "source": [
+    "There are generally three forms of data used in machine learning:\n",
+    "\n",
+    "a) Structured data: Structured data is organized in a tabular format with rows and columns, and is typically stored in a database or spreadsheet. Examples of structured data include financial data, stock market prices, and sales figures.\n",
+    "\n",
+    "b) Unstructured data: Unstructured data refers to any data that does not have a predefined structure or format. Examples of unstructured data include text documents, images, audio and video recordings, social media posts, and sensor data.\n",
+    "\n",
+    "c) Semi-structured data: Semi-structured data is a hybrid of structured and unstructured data. It contains some organizational structure, but the structure is not as rigid as structured data. Examples of semi-structured data include XML and JSON files, web logs, and emails.\n",
+    "\n",
+    "Here are some specific examples of each type of data:\n",
+    "\n",
+    "i) Structured data: A company's sales data in a spreadsheet or database, containing columns such as date, product, quantity sold, and price.\n",
+    "\n",
+    "ii) Unstructured data: An image dataset of cats and dogs, where each image is a collection of pixels without a predefined structure or format.\n",
+    "\n",
+    "iii)Semi-structured data: A collection of customer feedback emails, where each email has a specific sender and subject line, but the body of the email can vary in length and content. The email could also contain attachments such as images or documents, which further adds to its semi-structured nature.\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "22fb92ee-2dcb-4aab-919b-924bb3beef97",
+   "metadata": {},
+   "source": [
+    "3) Distinguish:\n",
+    "\n",
+    "1. Numeric vs. categorical attributes\n",
+    "\n",
+    "2. Feature selection vs. dimensionality reduction"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "29e3b379-de45-4361-94e7-d66db447ac00",
+   "metadata": {},
+   "source": [
+    "1) Numeric vs. categorical attributes:\n",
+    "Numeric attributes are those that have a numerical value, such as height, weight, temperature, or age. They are typically continuous or discrete variables that can be measured or counted. Categorical attributes, on the other hand, are those that have values that belong to a specific set of categories, such as colors, gender, or vehicle types. They are typically represented as strings or labels, rather than numerical values.\n",
+    "\n",
+    "2) Feature selection vs. dimensionality reduction:\n",
+    "Feature selection and dimensionality reduction are both techniques used to reduce the number of features in a dataset. However, they differ in their approach and goal. Feature selection aims to select a subset of the most relevant features from the original set, while discarding the rest. This is done to improve the model's accuracy, reduce complexity, and avoid overfitting. The selected features are often based on statistical tests, domain knowledge, or feature importance ranking. In contrast, dimensionality reduction aims to transform the original features into a lower-dimensional space, while preserving as much of the original variance as possible. \n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "68bd68d7-0a26-40e8-8fa4-1c9af6ce7836",
+   "metadata": {},
+   "source": [
+    "4) Make quick notes on any two of the following:\n",
+    "\n",
+    "1. The histogram\n",
+    "\n",
+    "2. Use a scatter plot\n",
+    "\n",
+    "3.PCA (Personal Computer Aid)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "50802652-fd37-46f5-8da3-22fad9cc10f2",
+   "metadata": {},
+   "source": [
+    "1) The histogram:\n",
+    "A histogram is a graphical representation of the distribution of a dataset. It shows the frequency of each value or range of values in the dataset, grouped into equal-sized bins along the x-axis. The height of each bin corresponds to the number of observations that fall within that bin. Histograms can help identify patterns, skewness, outliers, and gaps in the data distribution. They are commonly used in data exploration, descriptive statistics, and feature engineering.\n",
+    "\n",
+    "3) PCA (Principal Component Analysis):\n",
+    "PCA is a linear dimensionality reduction technique that is used to transform a high-dimensional dataset into a lower-dimensional space, while retaining as much of the original variance as possible. It works by identifying the directions of maximum variability in the data, called principal components, and projecting the data onto these components. This reduces the number of dimensions while preserving most of the information in the data. PCA is commonly used in data preprocessing, exploratory data analysis, and feature extraction. It can also be used to visualize high-dimensional data in a lower-dimensional space."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "99bddfa1-e528-4c17-a223-7829d1fa4084",
+   "metadata": {},
+   "source": [
+    "5) Why is it necessary to investigate data? Is there a discrepancy in how qualitative and quantitative\n",
+    "data are explored?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c89b7ca0-20b4-4fe1-9881-8bcb6b31e845",
+   "metadata": {},
+   "source": [
+    "It is necessary to investigate data to gain a better understanding of the characteristics, patterns, and trends in the data. By exploring the data, we can identify potential errors, inconsistencies, outliers, and missing values, and decide how to handle them appropriately. We can also extract relevant features, select appropriate models, and validate our assumptions. Data exploration is an essential step in the data science workflow, as it sets the stage for data preprocessing, modeling, and analysis.\n",
+    "\n",
+    "There is a discrepancy in how qualitative and quantitative data are explored. Qualitative data are often explored through methods such as content analysis, narrative analysis, discourse analysis, or grounded theory. These methods involve reading, categorizing, and interpreting text, images, or other non-numeric data. Qualitative data exploration focuses on identifying themes, patterns, and relationships within the data, and developing a rich, nuanced understanding of the underlying phenomenon.\n",
+    "\n",
+    "Quantitative data, on the other hand, are often explored through statistical methods such as descriptive statistics, hypothesis testing, or regression analysis. These methods involve computing and analyzing numerical measures of central tendency, variability, association, or prediction. Quantitative data exploration focuses on summarizing, visualizing, and modeling the data in a way that allows us to draw inferences, make predictions, or test hypotheses."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d389dbcc-4e45-4e44-bb24-5c947fd07dc3",
+   "metadata": {},
+   "source": [
+    "6) What are the various histogram shapes? What exactly are ‘bins&#39;?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ef8c24f8-1321-4502-81f7-c4d6b1749bbb",
+   "metadata": {},
+   "source": [
+    "Histograms can have different shapes depending on the underlying distribution of the data. Here are some common shapes:\n",
+    "\n",
+    "a) Normal Distribution: A bell-shaped curve with a symmetrical distribution around the mean.\n",
+    "\n",
+    "b) Skewed Distribution: A distribution that is asymmetrical, with a tail that extends to one side.\n",
+    "\n",
+    "c) Bimodal Distribution: A distribution with two peaks or modes.\n",
+    "\n",
+    "d) Uniform Distribution: A distribution in which all values occur with equal frequency.\n",
+    "\n",
+    "Bins in a histogram are the intervals into which the range of the data is divided. The range is divided into equal-sized intervals, and the number of observations falling in each interval is counted and plotted as a bar or rectangle. The width of each bin is determined by the range of the data and the number of bins chosen. The number of bins is a parameter that can be adjusted depending on the characteristics of the data and the purpose of the analysis."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "66ad1042-43ee-4112-9c9b-7c34085c2aa0",
+   "metadata": {},
+   "source": [
+    "7) How do we deal with data outliers?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6c940972-90a9-459c-bd3b-a647e840ea80",
+   "metadata": {},
+   "source": [
+    "Dealing with data outliers is an important step in data preprocessing as outliers can have a significant impact on the analysis and modeling results. Outliers are observations that are significantly different from other observations in the dataset, and they may arise due to measurement errors, data entry errors, or other reasons.\n",
+    "\n",
+    "Here are some common approaches to dealing with outliers:\n",
+    "\n",
+    "a) Removing outliers: One approach is to remove outliers from the dataset entirely. This can be done by identifying observations that fall outside a certain range or threshold, or by using statistical methods such as z-scores or boxplots. However, this approach should be used with caution as it can result in a loss of information and bias the analysis.\n",
+    "\n",
+    "b) Imputing values: Another approach is to impute or replace the outliers with more reasonable values. This can be done by using statistical methods such as mean, median, or mode imputation, or by using more advanced methods such as regression or k-nearest neighbors. However, this approach can also introduce bias and affect the analysis.\n",
+    "\n",
+    "c) Transforming variables: Sometimes, transforming variables can help reduce the impact of outliers on the analysis. For example, using a logarithmic transformation can help reduce the impact of extreme values in a variable that follows a power-law distribution."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1196142b-df03-40ee-bef9-9681657bb6b3",
+   "metadata": {},
+   "source": [
+    "8) What are the various central inclination measures? Why does mean vary too much from median in\n",
+    "certain data sets?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "50f021a6-bdf1-4f8e-91d7-d423f78e5b73",
+   "metadata": {},
+   "source": [
+    "Central inclination measures are statistical measures used to describe the central or typical value of a dataset. The most common measures of central tendency are:\n",
+    "\n",
+    "a) Mean: The mean is the arithmetic average of all the values in the dataset. It is calculated by dividing the sum of all the values by the number of observations.\n",
+    "\n",
+    "b) Median: The median is the middle value in a dataset, such that half the observations are above it and half are below it.\n",
+    "\n",
+    "c) Mode: The mode is the most frequently occurring value in a dataset.\n",
+    "\n",
+    "The mean and median can differ in certain datasets where there are extreme values or outliers. The mean is sensitive to outliers, as it takes into account all the values in the dataset, including the extreme values. The median, on the other hand, is resistant to outliers, as it is only affected by the middle value(s) of the dataset.\n",
+    "\n",
+    "When the distribution of the data is skewed or asymmetric, the mean can vary significantly from the median. For example, in a dataset with a long tail to the right, the mean will be pulled to the right by the extreme values, whereas the median will remain closer to the bulk of the data."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5f057719-8dab-48f4-be5d-3ac5d6e353a1",
+   "metadata": {},
+   "source": [
+    "9) Describe how a scatter plot can be used to investigate bivariate relationships. Is it possible to find\n",
+    "outliers using a scatter plot?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3681d96b-be5e-4ecb-a17a-40a315b84223",
+   "metadata": {},
+   "source": [
+    "A scatter plot is a graphical representation of a set of bivariate data points, where each point represents the values of two variables for a single observation. The x-axis represents one variable, and the y-axis represents the other variable. Scatter plots are used to investigate the relationship between the two variables, and to identify any patterns, trends, or correlations that may exist between them.\n",
+    "\n",
+    "To investigate bivariate relationships using a scatter plot, we first plot the data points on the graph and observe the distribution of the points. We can then visually examine the scatter plot to identify any patterns or trends in the data. For example, if the points are scattered evenly across the plot, there may be no relationship between the variables, while if the points form a linear pattern, there may be a strong positive or negative correlation between the variables.\n",
+    "\n",
+    "Scatter plots can also be used to identify outliers in the data. Outliers are data points that are significantly different from other data points in the dataset. They can be identified as points that fall outside the normal range of values for the variables being plotted, or as points that are far away from the bulk of the data points. Outliers can be identified visually on a scatter plot, as they will appear as data points that are significantly distant from the other points in the plot.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c6c67ed1-bfa2-43cf-a6b7-9d78956f902f",
+   "metadata": {},
+   "source": [
+    "10) Describe how cross-tabs can be used to figure out how two variables are related."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dce77479-2d12-44d9-8797-25ef0839fd38",
+   "metadata": {},
+   "source": [
+    "Cross-tabulation (cross-tab) is a statistical technique used to analyze the relationship between two categorical variables. It involves creating a table that displays the frequency counts and/or percentages of the joint distribution of two or more categorical variables.\n",
+    "\n",
+    "To create a cross-tab table, we first identify the two categorical variables of interest. We then list the categories of each variable as the row and column headers of the table. We then count the number of occurrences of each combination of categories and enter the corresponding values in the table cells.\n",
+    "\n",
+    "Once the cross-tab table is created, we can analyze the relationship between the two variables by examining the distribution of values in the table. We can compute summary statistics such as row and column totals, marginal percentages, and conditional percentages to explore the association between the variables."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f8aee65d-75e2-416d-86fb-d3c1f983fc80",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "",
+   "name": ""
+  },
+  "language_info": {
+   "name": ""
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

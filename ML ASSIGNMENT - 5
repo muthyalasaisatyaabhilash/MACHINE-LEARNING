@@ -1,0 +1,316 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "97d13d0e-737f-4a4d-b163-9e8ff45c2472",
+   "metadata": {},
+   "source": [
+    "1) What are the key tasks that machine learning entails? What does data pre-processing imply?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3570c7bf-a78c-47b3-ae24-0cdb639f3356",
+   "metadata": {},
+   "source": [
+    "Machine learning involves a range of tasks, some of the key ones are:\n",
+    "\n",
+    "a) Data collection: The first step in any machine learning project is to collect relevant data that can be used to train a model.\n",
+    "\n",
+    "b) Data pre-processing: This step involves cleaning and transforming raw data into a format that can be used for analysis. This includes tasks such as handling missing data, dealing with outliers, and normalizing or scaling features.\n",
+    "\n",
+    "c) Feature selection: In this step, the most relevant features are selected for use in the model. This involves identifying features that are most predictive of the outcome variable and removing irrelevant or redundant features.\n",
+    "\n",
+    "d) Model selection: Choosing the appropriate model for a given problem is an important step in machine learning. This involves selecting from a range of models, such as linear regression, decision trees, or neural networks, based on their performance on the given task.\n",
+    "\n",
+    "Data pre-processing refers to the steps taken to clean and transform raw data into a format that can be used for analysis. This involves a range of tasks, such as handling missing data, dealing with outliers, and normalizing or scaling features. The goal of data pre-processing is to ensure that the data is in a consistent and usable format for machine learning algorithms. It is an important step in machine learning because the quality of the input data can have a significant impact on the performance of the resulting model.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f424ea86-a38c-4351-968e-c99155f462cc",
+   "metadata": {},
+   "source": [
+    "2) Describe quantitative and qualitative data in depth. Make a distinction between the two."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "72f51132-d559-4b21-a033-980ada6942dd",
+   "metadata": {},
+   "source": [
+    "Quantitative and qualitative data are two types of data that are commonly used in research and data analysis. The key distinction between the two is that quantitative data is numerical in nature, while qualitative data is non-numerical.\n",
+    "\n",
+    "Quantitative data is data that can be expressed in numerical terms and can be analyzed using statistical methods. Examples of quantitative data include measurements such as height, weight, and age, as well as numerical ratings or scores, such as a customer satisfaction rating on a scale of 1-10. \n",
+    "\n",
+    "On the other hand, qualitative data is data that is non-numerical and is typically collected through methods such as interviews, focus groups, or observations. Qualitative data may include text, images, or audio recordings, and it often provides insight into subjective experiences, opinions, or attitudes. Examples of qualitative data might include open-ended survey responses, transcripts of interviews or focus groups, or field notes from an observation study. \n",
+    "\n",
+    "The key difference between quantitative and qualitative data is that quantitative data is numerical and can be analyzed using statistical methods, while qualitative data is non-numerical and is often used to provide insight into subjective experiences or attitudes. Both types of data are valuable for different types of research questions and can be used together to provide a more comprehensive understanding of a phenomenon.\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "79bf12d0-fd6c-409c-8401-664113a8d167",
+   "metadata": {},
+   "source": [
+    "3) Create a basic data collection that includes some sample records. Have at least one attribute from\n",
+    "each of the machine learning data types."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e3ef435a-1510-4d41-b82c-83fe813b38e1",
+   "metadata": {},
+   "source": [
+    "Sure, here's an example of a basic data collection with three sample records, each containing attributes from the four types of machine learning data:\n",
+    "\n",
+    "Record\tAge \tGender\tIncome (USD)\t  Education Level \tJob Title\n",
+    "1\t    32\t    Male\t 60000\t           Bachelor's\t     Software Engineer\n",
+    "2\t    45\t    Female\t 80000\t            Master's\t     Marketing Manager\n",
+    "3\t    28\t    Male\t 35000      \tHigh School\t     Delivery Driver\n",
+    "\n",
+    "In this example, the \"Age\" attribute is a numerical variable (quantitative data), the \"Gender\" attribute is a categorical variable (qualitative data), the \"Income\" attribute is a continuous numerical variable (quantitative data), the \"Education Level\" attribute is an ordinal categorical variable (qualitative data), and the \"Job Title\" attribute is a nominal categorical variable (qualitative data).\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a3701d02-d9b7-47f4-9605-8d4b04bf91df",
+   "metadata": {},
+   "source": [
+    "4) What are the various causes of machine learning data issues? What are the ramifications?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cc5a808a-eb4a-4e09-9e2a-9c4f57e0aa96",
+   "metadata": {},
+   "source": [
+    "There are several causes of machine learning data issues that can arise during the data collection, processing, or analysis stages. Some of the most common causes of data issues include:\n",
+    "\n",
+    "a) Missing Data: Missing data can occur when some observations or variables are not available or not recorded. This can result in incomplete or biased analyses, as the missing data may have contained important information or influenced the results.\n",
+    "\n",
+    "b) Outliers: Outliers are observations that are significantly different from the rest of the data. Outliers can be caused by measurement errors or other anomalies in the data collection process. Outliers can skew the results of statistical analyses, and may need to be handled appropriately.\n",
+    "\n",
+    "c) Inconsistent Data: Inconsistent data can occur when different sources of data are used, or when data is collected at different times or in different ways. Inconsistent data can make it difficult to draw valid conclusions or compare results across different datasets.\n",
+    "\n",
+    "The ramifications of machine learning data issues can be significant, including:\n",
+    "\n",
+    "1) Poor Model Performance: Data issues can lead to poor model performance, as the model may be trained on incomplete, biased, or inconsistent data. This can result in inaccurate predictions or poor model fit.\n",
+    "\n",
+    "2) Increased Error Rates: Data issues can lead to increased error rates, as the model may make incorrect predictions or classifications based on incomplete or inconsistent data."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "29f1f256-efe8-413b-b06c-ce4db911ce09",
+   "metadata": {},
+   "source": [
+    "5) Demonstrate various approaches to categorical data exploration with appropriate examples."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "626e7871-67a5-400b-a555-18c493fc09e7",
+   "metadata": {},
+   "source": [
+    "Exploring categorical data is an important step in data analysis, as it can provide insights into patterns and relationships that may be important for understanding the data. Here are several approaches to exploring categorical data, along with examples of each:\n",
+    "\n",
+    "a) Frequency Tables: Frequency tables show the number of observations in each category.\n",
+    "\n",
+    "For example, consider the following dataset of job titles:\n",
+    "\n",
+    "Job Title\t      Frequency\n",
+    "Software Engineer\t30\n",
+    "Marketing Manager\t15\n",
+    "Delivery Driver  \t10\n",
+    "Sales Associate \t25\n",
+    "\n",
+    "A frequency table can help to identify which job titles are most common in the dataset.\n",
+    "\n",
+    "b) Bar Charts: Bar charts display the frequency of each category as a bar. \n",
+    "\n",
+    "For example, consider the following dataset of car brands:\n",
+    "\n",
+    "Car Brand\tFrequency\n",
+    "Toyota\t      20\n",
+    "Ford\t      15\n",
+    "Honda\t      25\n",
+    "Nissan\t      10\n",
+    "\n",
+    "A bar chart can help to visualize the relative frequencies of each car brand."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "da9b9249-5b2b-4b14-959c-fdd0f5e26558",
+   "metadata": {},
+   "source": [
+    "6) How would the learning activity be affected if certain variables have missing values? Having said\n",
+    "that, what can be done about it?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "60c4b27d-6287-46c8-9871-0354be89631f",
+   "metadata": {},
+   "source": [
+    "If certain variables have missing values, the learning activity can be affected in several ways. Firstly, if the proportion of missing values is significant, it may lead to biased or inaccurate results, as the missing values may contain important information that is not captured in the analysis. Additionally, missing values can reduce the size of the dataset, which can limit the ability to draw valid conclusions or generalize the results to a larger population.\n",
+    "\n",
+    "To address missing values, there are several strategies that can be used, including:\n",
+    "\n",
+    "a) Deletion: This strategy involves removing observations or variables with missing values. If the proportion of missing values is small and the remaining dataset is still sufficiently large, this may be a viable approach.\n",
+    "\n",
+    "b) Imputation: This strategy involves estimating the missing values based on the available data. There are several methods of imputation, including mean imputation, median imputation, regression imputation, and multiple imputation. These methods can help to recover some of the lost information and improve the accuracy of the results.\n",
+    "\n",
+    "c) Modeling: This strategy involves incorporating the missing values as a separate category or incorporating them into the model in some other way. For example, decision tree models can handle missing values by assigning them to a separate branch of the tree. \n",
+    "\n",
+    "In summary, missing values can affect the learning activity by reducing the size of the dataset and potentially introducing bias or inaccuracy into the results. To address missing values, a variety of strategies can be used, including deletion, imputation, and modeling, each with their own advantages and disadvantages. \n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "229255a9-ce56-4507-ab2c-2f320fbec164",
+   "metadata": {},
+   "source": [
+    "7) Describe the various methods for dealing with missing data values in depth."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "017a70f6-df8b-4bd5-82a1-4493773403e1",
+   "metadata": {},
+   "source": [
+    "Missing data values are a common problem in data analysis, and can arise due to a variety of reasons such as data entry errors, loss of data, or non-response. The presence of missing data can lead to biased or inaccurate results and can impact the validity of statistical analyses. To address the issue of missing data, there are several methods available, including:\n",
+    "\n",
+    "a) Complete case analysis:\n",
+    "Complete case analysis, also known as listwise deletion, is a straightforward approach that involves discarding all cases that contain missing data. This method works well if the amount of missing data is relatively small and missingness is completely at random. However, it can lead to loss of information and reduction of sample size, which can potentially lead to biased results.\n",
+    "\n",
+    "b) Mean imputation:\n",
+    "Mean imputation involves filling in the missing values with the mean value of the available data. This method is easy to implement and can be useful if the amount of missing data is small. However, mean imputation can lead to underestimation of the variance and potentially biased results if the data is not normally distributed.\n",
+    "\n",
+    "c) Last observation carried forward (LOCF):\n",
+    "LOCF imputes the missing data with the value of the previous observation. This method is commonly used in time series data where missing values are due to temporary disruptions. However, this method can lead to biased results if the missing values are not missing completely at random.\n",
+    "\n",
+    "\n",
+    "In summary, there are several methods available for dealing with missing data, each with its own advantages and disadvantages. The choice of method depends on the amount and type of missing data, the structure of the dataset, and the goals of the analysis. \n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0caf6247-ad11-43c1-b46c-b2d558104881",
+   "metadata": {},
+   "source": [
+    "8) What are the various data pre-processing techniques? Explain dimensionality reduction and\n",
+    "function selection in a few words."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4d1108c1-f0ca-45e2-aa70-859095dc58b3",
+   "metadata": {},
+   "source": [
+    "Data pre-processing refers to the set of techniques and operations applied to raw data before it can be used for analysis or modeling. Some common data pre-processing techniques include data cleaning, normalization, feature scaling, and handling missing values. These techniques are used to improve the quality and accuracy of the data and to prepare it for analysis.\n",
+    "\n",
+    "One important data pre-processing technique is dimensionality reduction, which involves reducing the number of variables or features in a dataset. This is done to simplify the analysis and make it more efficient, as well as to avoid the problems associated with high-dimensional data such as the curse of dimensionality. Dimensionality reduction can be achieved through techniques such as principal component analysis (PCA) and singular value decomposition (SVD), which identify the most important features in the data and reduce the data to a lower-dimensional representation."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "49777ed6-f75e-4f89-a58d-da63575e0c94",
+   "metadata": {},
+   "source": [
+    "9) i. What is the IQR? What criteria are used to assess it?\n",
+    "\n",
+    "ii. Describe the various components of a box plot in detail? When will the lower whisker\n",
+    "surpass the upper whisker in length? How can box plots be used to identify outliers?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "80d7845c-5e1d-4756-be66-37da1a290810",
+   "metadata": {},
+   "source": [
+    "i. The IQR (interquartile range) is a measure of variability that is calculated as the difference between the third quartile (Q3) and the first quartile (Q1) of a dataset. The IQR is a useful measure of variability as it is less sensitive to outliers than other measures such as the range or standard deviation.\n",
+    "\n",
+    "To assess the IQR, we can compare it to other measures of variability such as the range or standard deviation. A larger IQR indicates greater variability in the middle 50% of the data, while a smaller IQR indicates less variability. Additionally, we can use the IQR to identify outliers by applying a rule of thumb that defines outliers as any values that fall more than 1.5 times the IQR below Q1 or above Q3.\n",
+    "\n",
+    "ii. A box plot, also known as a box-and-whisker plot, is a graphical representation of a dataset that displays the distribution of the data through five summary statistics: the minimum value, the first quartile (Q1), the median, the third quartile (Q3), and the maximum value.\n",
+    "\n",
+    "The components of a box plot include:\n",
+    "\n",
+    "a)The box, which represents the IQR and contains the middle 50% of the data\n",
+    "\n",
+    "b) The median, which is represented by a vertical line inside the box\n",
+    "\n",
+    "c) The whiskers, which extend from the box to the minimum and maximum values that are not considered outliers\n",
+    "\n",
+    "d) The outliers, which are represented as individual points beyond the whiskers\n",
+    "\n",
+    "The lower whisker will surpass the upper whisker in length when the IQR is smaller than the range of the data, which occurs when the distribution of the data is skewed. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ce9482af-9128-4370-ac03-eaf3a8ace810",
+   "metadata": {},
+   "source": [
+    "10) Make brief notes on any two of the following:\n",
+    "\n",
+    "1. Data collected at regular intervals\n",
+    "\n",
+    "2. The gap between the quartiles\n",
+    "\n",
+    "3. Use a cross-tab\n",
+    "\n",
+    "1. Make a comparison between:\n",
+    "\n",
+    "1. Data with nominal and ordinal values\n",
+    "\n",
+    "2. Histogram and box plot\n",
+    "\n",
+    "3. The average and median"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "be4aebc2-71ca-4962-b3b4-17ad676cc27e",
+   "metadata": {},
+   "source": [
+    "Notes on \"Data collected at regular intervals\" and \"Use a cross-tab\":\n",
+    "\n",
+    "1) Data collected at regular intervals:\n",
+    "Data collected at regular intervals refers to data that is collected at fixed and evenly spaced time intervals. This type of data is also known as time series data. Examples of data collected at regular intervals include stock prices, weather data, and sales data. Time series data can be analyzed using a variety of statistical techniques, such as trend analysis, seasonal analysis, and forecasting. Time series data can also be visualized using line graphs or time series plots, which show how the data changes over time.\n",
+    "\n",
+    "3) Use a cross-tab:\n",
+    "A cross-tab, also known as a contingency table or a crosstab, is a table that displays the distribution of two or more variables. Cross-tabs are commonly used in data analysis to summarize and compare the relationship between two or more variables. For example, a cross-tab could be used to display the distribution of gender and age in a population, or the distribution of sales by product and region. Cross-tabs can be used to calculate and visualize various statistics, such as percentages, counts, and averages, and can also be used to identify patterns and trends in the data."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c966a385-5f05-4847-af1c-1710ef3ca54b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "",
+   "name": ""
+  },
+  "language_info": {
+   "name": ""
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

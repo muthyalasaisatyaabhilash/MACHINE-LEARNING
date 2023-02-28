@@ -1,0 +1,422 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "c72b9755-5fa3-4dae-98f9-c5dbdd18cbd9",
+   "metadata": {},
+   "source": [
+    "1) Recognize the differences between supervised, semi-supervised, and unsupervised learning."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2ee9c6d1-9d6a-4dd6-a78f-c1831e151fc9",
+   "metadata": {},
+   "source": [
+    "Supervised, semi-supervised, and unsupervised learning are three different types of machine learning approaches used in data analysis.\n",
+    "\n",
+    "a) Supervised learning:\n",
+    "Supervised learning is a type of machine learning where a model learns to make predictions by training on a labeled dataset. In supervised learning, there is a set of input data and corresponding output data, also known as labels. The goal is to find a relationship between the input and output data, so that the model can predict the output for new, unseen input data. \n",
+    "\n",
+    "b) Semi-supervised learning:\n",
+    "Semi-supervised learning is a type of machine learning where a model learns to make predictions using a combination of labeled and unlabeled data. In semi-supervised learning, there is a limited amount of labeled data and a larger amount of unlabeled data. The goal is to use the limited labeled data to guide the learning process and improve the accuracy of the model on the unlabeled data. \n",
+    "\n",
+    "c) Unsupervised learning:\n",
+    "Unsupervised learning is a type of machine learning where a model learns to identify patterns in data without any explicit guidance. In unsupervised learning, there are no labeled data, and the algorithm is left to find patterns and relationships in the data on its own. The goal is to discover the inherent structure of the data, such as clustering, dimensionality reduction, and anomaly detection. \n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e4716eff-8c3e-4ee4-83a4-d601a01b34c0",
+   "metadata": {},
+   "source": [
+    "2) Describe in detail any five examples of classification problems."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "42dd1e56-9b40-493d-b841-003b23d916fd",
+   "metadata": {},
+   "source": [
+    "Classification is a type of machine learning problem where the goal is to predict a categorical target variable based on a set of input features. Here are five examples of classification problems:\n",
+    "\n",
+    "1) Image Classification:\n",
+    "Image classification is the process of identifying what objects are present in an image. The input features are the pixel values of the image, and the target variable is a categorical label indicating what object is present in the image. For example, given an image of a dog, the algorithm would predict that the image contains a dog.\n",
+    "\n",
+    "2) Email Spam Classification:\n",
+    "Email spam classification is the process of determining whether an email is spam or not. The input features could be the text content of the email, and the target variable is a binary label indicating whether the email is spam or not.\n",
+    "\n",
+    "3) Sentiment Analysis:\n",
+    "Sentiment analysis is the process of determining the sentiment of a piece of text, such as a tweet or a product review. The input features are the words in the text, and the target variable is a categorical label indicating whether the sentiment is positive, negative, or neutral.\n",
+    "\n",
+    "4) Customer Churn Prediction:\n",
+    "Customer churn prediction is the process of predicting whether a customer will leave a company or not. The input features could be demographic information about the customer, their purchase history, and their interaction with the company, and the target variable is a binary label indicating whether the customer will churn or not.\n",
+    "\n",
+    "5) Disease Diagnosis:\n",
+    "Disease diagnosis is the process of predicting whether a patient has a particular disease or not. The input features could be the patient's symptoms, medical history, and demographic information, and the target variable is a binary label indicating whether the patient has the disease or not."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3fcfca13-1456-4804-9197-882331e17ed2",
+   "metadata": {},
+   "source": [
+    "3) Describe each phase of the classification process in detail."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "83674c80-7cdc-4876-b86e-984cb3e48f6f",
+   "metadata": {},
+   "source": [
+    "The classification process involves several phases, each of which is important for building an accurate and effective model. Here are the different phases of the classification process:\n",
+    "\n",
+    "a) Data Collection and Preparation:\n",
+    "The first step in the classification process is to collect and prepare the data. This involves identifying the sources of data, collecting relevant data, and cleaning the data to remove any errors, inconsistencies, or missing values. It is also important to split the data into training and testing datasets to evaluate the performance of the model.\n",
+    "\n",
+    "b) Feature Selection and Engineering:\n",
+    "The second step is to select and engineer relevant features that will be used as input to the model. This involves selecting features that are relevant to the target variable and discarding irrelevant or redundant features. Feature engineering involves transforming the raw data into a format that can be used as input to the model. This may involve normalizing or scaling the data, encoding categorical variables, and creating new features from the existing ones.\n",
+    "\n",
+    "c) Model Selection:\n",
+    "The third step is to select an appropriate machine learning algorithm for the classification problem. There are several types of classification algorithms, including decision trees, logistic regression, support vector machines, and neural networks. The choice of algorithm will depend on the specific problem and the characteristics of the data.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "65b82ec9-ee1b-4ebb-b8a2-9b02b2c87a54",
+   "metadata": {},
+   "source": [
+    "4) Go through the SVM model in depth using various scenarios."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d30a419c-c973-4264-95ec-a1650529e952",
+   "metadata": {},
+   "source": [
+    "Support Vector Machine (SVM) is a popular machine learning algorithm that can be used for both classification and regression problems. SVM is a discriminative algorithm that tries to find a hyperplane in a high-dimensional space that separates the data points into different classes. In this section, we will go through the SVM model in depth using various scenarios.\n",
+    "\n",
+    "1) Linearly Separable Data:\n",
+    "The simplest scenario is when the data is linearly separable, which means that there is a hyperplane that can perfectly separate the data into different classes. In this case, the SVM algorithm tries to find the hyperplane that maximizes the margin, which is the distance between the hyperplane and the closest data points from each class. The optimal hyperplane is the one that maximizes the margin and minimizes the classification error.\n",
+    "\n",
+    "2) Non-Linearly Separable Data:\n",
+    "In many cases, the data is not linearly separable, which means that there is no hyperplane that can perfectly separate the data into different classes. In this case, the SVM algorithm uses a technique called kernel trick to transform the data into a higher-dimensional space where it becomes linearly separable. The kernel function allows SVM to compute the dot product between two points in the higher-dimensional space without actually computing the transformation."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "89c47a25-e560-4bc5-98b6-6ecc9ee2b009",
+   "metadata": {},
+   "source": [
+    "5) What are some of the benefits and drawbacks of SVM?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "afd1a111-9703-477b-aa89-541913076ecc",
+   "metadata": {},
+   "source": [
+    "Support Vector Machines (SVMs) have become a popular machine learning algorithm due to their high accuracy and ability to handle high-dimensional data. However, like any other algorithm, SVMs have their benefits and drawbacks. Here are some of the benefits and drawbacks of SVM:\n",
+    "\n",
+    "Benefits:\n",
+    "\n",
+    "1) SVMs are effective in high-dimensional spaces where there are many features.\n",
+    "2) SVMs work well with both linearly separable and non-linearly separable data, thanks to the kernel trick.\n",
+    "3) SVMs are less prone to overfitting since they maximize the margin and minimize the classification error simultaneously.\n",
+    "4) SVMs can handle imbalanced data by using different weights for different classes.\n",
+    "5) SVMs can be used for both classification and regression problems.\n",
+    "\n",
+    "Drawbacks:\n",
+    "\n",
+    "1) SVMs can be slow when dealing with large datasets, especially when using non-linear kernels.\n",
+    "2) SVMs can be sensitive to the choice of kernel function and the kernel parameters, which may require some trial and error to optimize.\n",
+    "3) SVMs do not provide a direct probability estimate for the classification, but instead provide a decision function.\n",
+    "4) SVMs can be affected by the presence of noisy data or outliers, which may lead to poor performance.\n",
+    "5) SVMs can be difficult to interpret due to the complexity of the model and the non-linear transformations used.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "19809bc9-cd4e-4401-a681-082229e396b5",
+   "metadata": {},
+   "source": [
+    "6) Go over the kNN model in depth."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "280b0fd1-fa06-4558-bc27-e576f5d0cd14",
+   "metadata": {},
+   "source": [
+    "K-Nearest Neighbor (kNN) is a popular non-parametric machine learning algorithm used for both regression and classification problems. The kNN algorithm is a lazy learning algorithm, which means that it does not require training the model on the entire dataset. Instead, it stores the entire dataset and uses it to make predictions for new data points. In this section, we will go over the kNN model in depth.\n",
+    "\n",
+    "Algorithm:\n",
+    "The kNN algorithm works as follows:\n",
+    "\n",
+    "1) Load the dataset into memory.\n",
+    "2) Choose the number of k nearest neighbors to consider.\n",
+    "3) Calculate the distance between the new data point and all other data points in the dataset.\n",
+    "4) Select the k data points with the smallest distances to the new data point.\n",
+    "5) For regression problems, take the average of the target values of the k data points as the predicted value for the new data point.\n",
+    "6) For classification problems, take the majority class of the k data points as the predicted class for the new data point."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "772a8718-22fc-4baa-8750-f8c67c4b993f",
+   "metadata": {},
+   "source": [
+    "7) Discuss the kNN algorithm&#39;s error rate and validation error."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f8f0c5e9-8384-475f-8b9f-3375d7fec377",
+   "metadata": {},
+   "source": [
+    "The kNN algorithm's error rate and validation error are important measures of its performance.\n",
+    "\n",
+    "Error Rate:\n",
+    "The error rate is the proportion of misclassified data points in the test set. In a classification problem, the error rate is the number of incorrect predictions divided by the total number of predictions. The error rate can be used to evaluate the accuracy of the kNN algorithm. The goal is to minimize the error rate by optimizing the choice of k and the distance metric.\n",
+    "\n",
+    "Validation Error:\n",
+    "The validation error is the error rate calculated on a separate validation set that is not used for training or testing the model. The validation set is used to evaluate the performance of the kNN algorithm on new data points that were not seen during training. The validation error can be used to tune the hyperparameters of the kNN algorithm, such as the choice of k and the distance metric."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "84ccd9f9-7a08-434a-83a2-68bd8951bca6",
+   "metadata": {},
+   "source": [
+    "8) For kNN, talk about how to measure the difference between the test and training results."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a5db76db-a01d-46cd-8eb4-906252da2cab",
+   "metadata": {},
+   "source": [
+    "Measuring the difference between the test and training results in kNN can provide insight into the performance of the algorithm and help diagnose potential issues. One way to measure the difference is through the bias-variance decomposition.\n",
+    "\n",
+    "Bias refers to the error that is introduced by approximating a real-world problem with a simplified model. High bias means that the model is too simple and cannot capture the underlying patterns in the data, leading to underfitting. On the other hand, low bias means that the model is complex enough to capture the patterns in the data, leading to better performance.\n",
+    "\n",
+    "In kNN, the choice of k can affect the bias-variance tradeoff. If k is too small, the algorithm may have high variance and low bias, leading to overfitting. If k is too large, the algorithm may have high bias and low variance, leading to underfitting. The optimal choice of k depends on the problem domain and can be determined through cross-validation or other techniques.\n",
+    "\n",
+    "To measure the difference between the test and training results, we can calculate the bias and variance separately. The bias can be estimated by comparing the average prediction of the algorithm on the training set to the true value of the target variable. The variance can be estimated by calculating the variability of the prediction across different subsets of the training set."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "18231540-1ce9-4650-86cc-8ea35b87f29f",
+   "metadata": {},
+   "source": [
+    "9) Create the kNN algorithm."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "47346a32-99ac-4f82-bdfc-25644a56f0a1",
+   "metadata": {},
+   "source": [
+    "Here is a simple implementation of the kNN algorithm in Python:\n",
+    "import numpy as np\n",
+    "from collections import Counter\n",
+    "\n",
+    "class kNN:\n",
+    "    \n",
+    "    def __init__(self, k=5):\n",
+    "        self.k = k\n",
+    "        \n",
+    "    def fit(self, X, y):\n",
+    "        self.X_train = X\n",
+    "        self.y_train = y\n",
+    "    \n",
+    "    def predict(self, X):\n",
+    "        y_pred = []\n",
+    "        for x in X:\n",
+    "            distances = np.sqrt(np.sum((self.X_train - x)**2, axis=1))\n",
+    "            indices = np.argsort(distances)[:self.k]\n",
+    "            labels = self.y_train[indices]\n",
+    "            counts = Counter(labels)\n",
+    "            y_pred.append(counts.most_common(1)[0][0])\n",
+    "        return np.array(y_pred)\n",
+    "\n",
+    "The kNN class has three methods:\n",
+    "\n",
+    "__init__: Initializes the object with the number of neighbors to consider (k).\n",
+    "fit: Takes in the training data (X) and labels (y) and stores them in the object.\n",
+    "predict: Takes in the test data (X) and returns the predicted labels."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4ab02f0e-6599-4f0c-af0f-1143675337bb",
+   "metadata": {},
+   "source": [
+    "10) What is a decision tree, exactly? What are the various kinds of nodes? Explain all in depth.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1bd1c31c-9848-4cec-9268-206bd90047ed",
+   "metadata": {},
+   "source": [
+    "A decision tree is a tree-based model used for classification and regression problems. It works by recursively splitting the data based on the values of its features to create a tree-like structure of decisions. The structure of the decision tree is built by analyzing the data, where each internal node represents a decision rule based on one of the input features and each leaf node represents a class label or a regression output.\n",
+    "\n",
+    "There are three types of nodes in a decision tree:\n",
+    "\n",
+    "a) Root node: The topmost node in the tree, which represents the entire dataset.\n",
+    "\n",
+    "b) Internal node: A node that represents a decision rule based on one of the input features. Each internal node has one or more child nodes that represent the possible outcomes of the decision rule.\n",
+    "\n",
+    "c) Leaf node: A node that represents a class label or a regression output. Each leaf node is associated with a class label or a regression value, which is the predicted output for the given input.\n",
+    "\n",
+    "In addition to the basic decision tree structure, there are several variations of decision trees that incorporate additional features or constraints:\n",
+    "\n",
+    "a) Pruning: Decision trees can suffer from overfitting, where they are too complex and fit the noise in the training data. Pruning is a technique that removes nodes from the tree to reduce its complexity and improve its generalization performance.\n",
+    "\n",
+    "b) Random forests: Random forests are an ensemble method that combine multiple decision trees to reduce overfitting and improve the accuracy of the predictions.\n",
+    "\n",
+    "c)Gradient boosting: Gradient boosting is another ensemble method that trains decision trees sequentially to improve the accuracy of the predictions. Each tree is trained on the residuals of the previous trees to reduce the error of the model.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b0e9342e-8635-439a-9484-ef358ffdf4b4",
+   "metadata": {},
+   "source": [
+    "11) Describe the different ways to scan a decision tree."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ae73fe51-3bf6-4738-a902-29d6c53351c0",
+   "metadata": {},
+   "source": [
+    "Once a decision tree has been constructed, there are several ways to scan or traverse the tree to make predictions or extract information from it. The two main ways to scan a decision tree are depth-first search and breadth-first search.\n",
+    "\n",
+    "1) Depth-first search (DFS): DFS is a traversal algorithm that starts at the root node and explores as far as possible along each branch before backtracking. In the case of a decision tree, DFS can be used to make predictions by starting at the root node and recursively traversing the tree based on the values of the input features until a leaf node is reached. The output of the prediction is the class label or regression value associated with the leaf node. DFS can also be used to extract information from the tree, such as the decision rules used to split the data and the feature importance.\n",
+    "\n",
+    "2) Breadth-first search (BFS): BFS is a traversal algorithm that explores all the nodes at a given depth before moving on to the nodes at the next depth. In the case of a decision tree, BFS can be used to extract information about the tree structure, such as the number of levels and the number of nodes at each level. BFS can also be used to make predictions by keeping track of the leaf nodes that have been reached at each depth and selecting the one with the highest probability or the majority class label."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b235319c-e838-4c49-96b2-75e807779ce8",
+   "metadata": {},
+   "source": [
+    "12) Describe in depth the decision tree algorithm."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "479ea57f-aa1b-407a-9973-096e0ac88604",
+   "metadata": {},
+   "source": [
+    "The decision tree algorithm is a popular machine learning algorithm for both classification and regression tasks. It works by recursively partitioning the data into subsets based on the values of the input features, until a stopping criterion is met. The resulting tree structure represents a set of decision rules that can be used to make predictions or extract information about the data.\n",
+    "\n",
+    "Here are the steps involved in the decision tree algorithm:\n",
+    "\n",
+    "1) Data preparation: The first step is to prepare the data by converting it into a format that can be used by the decision tree algorithm. This involves encoding categorical variables, handling missing values, and splitting the data into training and validation sets.\n",
+    "\n",
+    "2) Tree construction: The decision tree algorithm constructs the tree by recursively partitioning the data into subsets based on the values of the input features. At each step, the algorithm selects the feature that best separates the data into the different classes or produces the largest reduction in the variance of the target variable. This is done by calculating an impurity measure, such as entropy or Gini index, and selecting the feature that minimizes it.\n",
+    "\n",
+    "3) Stopping criterion: The tree construction process continues until a stopping criterion is met, which could be a maximum depth of the tree, a minimum number of samples required to split a node, or a minimum improvement in impurity. This helps to avoid overfitting, where the model memorizes the training data and performs poorly on new data."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ad84bd84-af7d-4465-900b-6fac9bafbac6",
+   "metadata": {},
+   "source": [
+    "13) In a decision tree, what is inductive bias? What would you do to stop overfitting?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "63ea13fa-2ec6-467d-93d8-1972f14f6638",
+   "metadata": {},
+   "source": [
+    "Inductive bias in a decision tree refers to the assumptions or prior knowledge that the algorithm makes about the problem domain based on the training data. This bias can affect the structure of the decision tree, as it guides the algorithm to favor certain features or splits over others.\n",
+    "\n",
+    "Overfitting is a common problem with decision trees, where the algorithm fits the training data too closely and produces a tree that is overly complex and specific to the training data, leading to poor performance on new data. To prevent overfitting in decision trees, there are several techniques that can be used:\n",
+    "\n",
+    "1) Pre-pruning: This involves setting a limit on the depth of the tree, the minimum number of samples required to split a node, or the minimum improvement in impurity. This helps to prevent the algorithm from creating overly complex trees that fit the noise in the training data.\n",
+    "\n",
+    "2) Post-pruning: This involves removing branches or nodes from the tree that do not improve its accuracy on a validation set. This helps to reduce the complexity of the tree and improve its generalization performance."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2258980b-64b5-4a35-b91f-50f3577a2dc0",
+   "metadata": {},
+   "source": [
+    "14) Explain advantages and disadvantages of using a decision tree?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2b869aef-9aae-4527-aa14-ec1097b4222e",
+   "metadata": {},
+   "source": [
+    "Advantages of using a decision tree include:\n",
+    "\n",
+    "1) Interpretable: Decision trees provide a clear and interpretable representation of the decision-making process, as each branch and split in the tree corresponds to a logical decision based on a feature of the data. This makes it easy to explain the reasoning behind the model's predictions to stakeholders.\n",
+    "\n",
+    "2) Non-parametric: Decision trees are a non-parametric method, meaning they do not make any assumptions about the underlying distribution of the data. This makes them more flexible and suitable for a wide range of data types and structures.\n",
+    "\n",
+    "However, there are also some disadvantages of using a decision tree:\n",
+    "\n",
+    "1) Overfitting: Decision trees are prone to overfitting the training data, resulting in a model that is overly complex and specific to the training data. This can lead to poor generalization performance on new data.\n",
+    "\n",
+    "2) Instability: Decision trees can be unstable, as small variations in the training data can result in a completely different tree structure. This makes them sensitive to the choice of training data and hyperparameters"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "229855c7-6f3e-4f76-b888-12e3fd2bb776",
+   "metadata": {},
+   "source": [
+    "15) Describe in depth the problems that are suitable for decision tree learning."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "82e9859e-98f0-4d78-98f1-628e4f0dbf5b",
+   "metadata": {},
+   "source": [
+    "Decision tree learning is suitable for a wide range of problems in the field of supervised learning, where there is a well-defined target variable that we wish to predict based on a set of input variables or features. Specifically, decision tree learning is well-suited for problems where:\n",
+    "\n",
+    "1) The data is categorical or ordinal: Decision tree learning is most commonly used for categorical or ordinal target variables, where the predicted output is a discrete value or category. For example, a decision tree could be used to predict the species of a flower based on its petal length, width, and color.\n",
+    "\n",
+    "2) The data is highly structured: Decision tree learning is well-suited for problems where the input data has a highly structured and hierarchical organization. For example, a decision tree could be used to predict the outcome of a football match based on the team's historical performance, the players' individual stats, and the weather conditions on the day of the match.\n",
+    "\n",
+    "3) The data is noisy or contains missing values: Decision tree learning is relatively robust to noisy or missing data, as it can identify and ignore irrelevant or missing features through feature selection and pruning techniques."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "aaa35f59-2423-422b-b819-313765998671",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "16) Describe in depth the random forest model. What distinguishes a random forest?"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "",
+   "name": ""
+  },
+  "language_info": {
+   "name": ""
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

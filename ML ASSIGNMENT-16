@@ -1,0 +1,320 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "2ed5a1eb-adf0-47b0-a364-c6586942ae70",
+   "metadata": {},
+   "source": [
+    "1) In a linear equation, what is the difference between a dependent variable and an independent\n",
+    "variable?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a25d660e-3808-406c-acc8-9e534fe9b7e3",
+   "metadata": {},
+   "source": [
+    "In a linear equation, the dependent variable is the variable that is being studied or measured and whose value depends on the value of another variable, known as the independent variable.\n",
+    "\n",
+    "The independent variable is the variable that is manipulated or controlled in order to observe its effect on the dependent variable. In a linear equation, the independent variable is typically plotted on the x-axis, while the dependent variable is plotted on the y-axis.\n",
+    "\n",
+    "For example, in the equation y = mx + b, where y is the dependent variable, x is the independent variable, m is the slope of the line, and b is the y-intercept. In this case, the value of y depends on the value of x, which is being manipulated or controlled."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5fa08643-2fdb-49c1-91e7-086a559b3093",
+   "metadata": {},
+   "source": [
+    "2) What is the concept of simple linear regression? Give a specific example."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "222acd6b-3892-4b33-8ef0-0dc220bf4a8a",
+   "metadata": {},
+   "source": [
+    "Simple linear regression is a statistical method used to model the relationship between two variables: a dependent variable (y) and an independent variable (x) that are assumed to have a linear relationship. The goal is to find the equation of a straight line that best describes the relationship between the two variables, allowing for the prediction of the dependent variable based on the value of the independent variable.\n",
+    "\n",
+    "A specific example of simple linear regression is the relationship between a person's age (independent variable) and their height (dependent variable). A researcher may collect data from a sample of individuals of various ages and measure their heights. The researcher would then plot the data on a scatter plot, with age on the x-axis and height on the y-axis.\n",
+    "\n",
+    "The researcher could then use simple linear regression to model the relationship between age and height by finding the equation of the line that best fits the data. The equation might look like:\n",
+    "\n",
+    "height = a + b * age\n",
+    "\n",
+    "where \"a\" is the y-intercept (the height of a person when their age is zero) and \"b\" is the slope of the line (the change in height for each unit increase in age). The researcher could use this equation to make predictions about a person's height based on their age. For example, if the equation predicted that a 30-year-old person should be 170 cm tall, and an individual is 30 years old but only 165 cm tall, this could indicate that they are shorter than average for their age.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ec835fc5-8532-4f86-b0a8-a895c221b966",
+   "metadata": {},
+   "source": [
+    "3) In a linear regression, define the slope."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5368c85c-679a-458c-851a-6a540185640d",
+   "metadata": {},
+   "source": [
+    "In linear regression, the slope is a measure of the steepness and direction of the linear relationship between the independent variable (x) and the dependent variable (y). It represents the change in the value of the dependent variable that is associated with a one-unit increase in the independent variable.\n",
+    "\n",
+    "Mathematically, the slope of a linear regression equation (often denoted as \"b\") is calculated as:\n",
+    "\n",
+    "b = (Σ(x - x̄)(y - ȳ)) / (Σ(x - x̄)²)\n",
+    "\n",
+    "where x̄ is the mean of the independent variable, ȳ is the mean of the dependent variable, and Σ represents the sum of the values for the given variable.\n",
+    "\n",
+    "In simple terms, the slope tells us how much the dependent variable (y) changes on average for each unit increase in the independent variable (x). A positive slope indicates a positive relationship between the two variables, meaning that as x increases, y tends to increase as well. A negative slope indicates a negative relationship, meaning that as x increases, y tends to decrease. A slope of zero indicates no linear relationship between the variables.\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bb900684-86bd-4ac0-bd51-3b6aa7a6875b",
+   "metadata": {},
+   "source": [
+    "4) Determine the graph&#39;s slope, where the lower point on the line is represented as (3, 2) and the\n",
+    "higher point is represented as (2, 2)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c492b95e-c870-46f7-8b7c-c425ac142e76",
+   "metadata": {},
+   "source": [
+    "It's not possible to determine the slope of the line with only two points that have the same y-coordinate. The slope of a line is defined as the change in y divided by the change in x between two points on the line. In this case, the two points given have the same y-coordinate of 2, meaning there is no change in y between them. Therefore, the slope of the line is undefined, or \"0/0\".\n",
+    "\n",
+    "In order to determine the slope, we need to have two points that have different y-coordinates. If there were a third point on the line with a different y-coordinate, we could use the formula for slope to calculate it."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dd95c7a7-9a4a-4825-ab1e-5349e001e982",
+   "metadata": {},
+   "source": [
+    "5) In linear regression, what are the conditions for a positive slope?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "98859426-818b-43da-a832-a52a9a865b7e",
+   "metadata": {},
+   "source": [
+    "In linear regression, a positive slope indicates that there is a positive relationship between the independent variable (x) and the dependent variable (y), which means that as x increases, y tends to increase as well. In order to have a positive slope, the following conditions must hold:\n",
+    "\n",
+    "1) There must be a linear relationship between x and y: The relationship between x and y must be linear, meaning that the data points should form a roughly straight line on a scatter plot.\n",
+    "\n",
+    "2) There must be a positive correlation between x and y: The correlation between x and y must be positive, meaning that as x increases, y tends to increase as well. This can be measured using the correlation coefficient, which is a value between -1 and 1 that indicates the strength and direction of the relationship between two variables.\n",
+    "\n",
+    "3) The residuals must be normally distributed: The residuals, which are the differences between the observed values of y and the predicted values of y based on the linear regression equation, must be normally distributed. This assumption can be checked using a normal probability plot or a histogram of the residuals."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "220beb87-988d-4508-acfc-30fb684315f3",
+   "metadata": {},
+   "source": [
+    "6) In linear regression, what are the conditions for a negative slope?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d69d1ff2-6ef4-4127-863d-ab991eb4ca7c",
+   "metadata": {},
+   "source": [
+    "In linear regression, a negative slope indicates that there is a negative relationship between the independent variable (x) and the dependent variable (y), which means that as x increases, y tends to decrease. In order to have a negative slope, the following conditions must hold:\n",
+    "\n",
+    "1) There must be a linear relationship between x and y: The relationship between x and y must be linear, meaning that the data points should form a roughly straight line on a scatter plot.\n",
+    "\n",
+    "2) There must be a negative correlation between x and y: The correlation between x and y must be negative, meaning that as x increases, y tends to decrease. This can be measured using the correlation coefficient, which is a value between -1 and 1 that indicates the strength and direction of the relationship between two variables.\n",
+    "\n",
+    "3) The residuals must be normally distributed: The residuals, which are the differences between the observed values of y and the predicted values of y based on the linear regression equation, must be normally distributed. This assumption can be checked using a normal probability plot or a histogram of the residuals.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7a39f4fc-cea7-4219-b2e3-0263bb26acd4",
+   "metadata": {},
+   "source": [
+    "7) What is multiple linear regression and how does it work?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "62905800-6e87-4404-889b-51698ca9d23a",
+   "metadata": {},
+   "source": [
+    "Multiple linear regression is a statistical technique used to model the relationship between two or more independent variables (also known as predictors or regressors) and a dependent variable. It extends simple linear regression, which models the relationship between one independent variable and a dependent variable, to include multiple predictors.\n",
+    "\n",
+    "In multiple linear regression, the goal is to find a linear equation that best fits the data and allows us to predict the value of the dependent variable based on the values of the independent variables. The equation takes the form:\n",
+    "\n",
+    "y = b0 + b1x1 + b2x2 + ... + bnxn + e\n",
+    "\n",
+    "where y is the dependent variable, x1, x2, ..., xn are the independent variables, b0 is the intercept, and b1, b2, ..., bn are the coefficients that represent the effect of each independent variable on the dependent variable, and e is the error term.\n",
+    "\n",
+    "The coefficients are estimated using a technique called least squares regression, which minimizes the sum of the squared differences between the predicted values of y and the actual values of y. The resulting equation can then be used to make predictions about the value of y for any combination of values of the independent variables.\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "94f1245d-c335-429c-973b-3f72a79257d7",
+   "metadata": {},
+   "source": [
+    "8) In multiple linear regression, define the number of squares due to error."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "70a4933b-7960-4514-8cb4-09e078334dee",
+   "metadata": {},
+   "source": [
+    "“Sum of Squared Errors” (SSE) is a simple, straightforward method to fit intercept lines between points — and compare those lines to find out the best fit through error reduction. The errors are the sum difference between actual value and predicted value."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e20493e2-6a0d-4f4f-b119-70c59a5100b6",
+   "metadata": {},
+   "source": [
+    "9) In multiple linear regression, define the number of squares due to regression.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f0580f08-8278-4e6d-815d-2e7592a240ef",
+   "metadata": {},
+   "source": [
+    "Multiple linear regression (MLR), also known simply as multiple regression, is a statistical technique that uses several explanatory variables to predict the outcome of a response variable. The goal of multiple linear regression is to model the linear relationship between the explanatory (independent) variables and response (dependent) variables. In essence, multiple regression is the extension of ordinary least-squares (OLS) regression because it involves more than one explanatory variable.\n",
+    "\n",
+    "KEY TAKEAWAYS\n",
+    "1) Multiple linear regression (MLR), also known simply as multiple regression, is a statistical technique that uses several explanatory variables to predict the outcome of a response variable.\n",
+    "2) Multiple regression is an extension of linear (OLS) regression that uses just one explanatory variable.\n",
+    "3) MLR is used extensively in econometrics and financial inference."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7fea7a31-1b08-4603-bcfe-e839b0606af4",
+   "metadata": {},
+   "source": [
+    "10) In a regression equation, what is multicollinearity? "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c5a2a302-61ea-42d1-bec9-990fb89d463c",
+   "metadata": {},
+   "source": [
+    "Multicollinearity exists whenever an independent variable is highly correlated with one or more of the other independent variables in a multiple regression equation. Multicollinearity is a problem because it will make the statistical inferences less reliable."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d46366ef-0f7e-494c-831e-1022cabf7654",
+   "metadata": {},
+   "source": [
+    "11) What is heteroskedasticity, and what does it mean?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e49a8b28-edb3-44cf-bdc7-994a1b04bba3",
+   "metadata": {},
+   "source": [
+    "In statistics, heteroskedasticity (or heteroscedasticity) happens when the standard deviations of a predicted variable, monitored over different values of an independent variable or as related to prior time periods, are non-constant."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0d0338d0-2860-4ce3-a6e9-890ef624ce6d",
+   "metadata": {},
+   "source": [
+    "12) Describe the concept of ridge regression."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e0cdb3b1-cd40-4724-905a-fa787cd8e78b",
+   "metadata": {},
+   "source": [
+    "Ridge regression is a model tuning method that is used to analyse any data that suffers from multicollinearity. This method performs L2 regularization. When the issue of multicollinearity occurs, least-squares are unbiased, and variances are large, this results in predicted values being far away from the actual values."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "da39d73d-807c-442d-9865-b0e0896be7dc",
+   "metadata": {},
+   "source": [
+    "13) Describe the concept of lasso regression."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7b3de9a1-c884-4401-9ca4-b4ee5a9d3942",
+   "metadata": {},
+   "source": [
+    "In statistics and machine learning, lasso (least absolute shrinkage and selection operator; also Lasso or LASSO) is a regression analysis method that performs both variable selection and regularization in order to enhance the prediction accuracy and interpretability of the resulting statistical model."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "47ea8b33-0aca-4f61-b106-e6cf161a1496",
+   "metadata": {},
+   "source": [
+    "14) What is polynomial regression and how does it work?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c6bfce4c-8bef-46e9-b5a2-bfdf406cda90",
+   "metadata": {},
+   "source": [
+    "In statistics, polynomial regression is a form of regression analysis in which the relationship between the independent variable x and the dependent variable y is modelled as an nth degree polynomial in x."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b01d1001-3c5d-4d18-b049-dd6d3ad399a9",
+   "metadata": {},
+   "source": [
+    "15) Describe the basis function."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "26a00fca-7110-49e6-be5e-8c39e1cde37a",
+   "metadata": {},
+   "source": [
+    "In mathematics, a basis function is an element of a particular basis for a function space. Every function in the function space can be represented as a linear combination of basis functions, just as every vector in a vector space can be represented as a linear combination of basis vectors."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3eb87bc9-56e2-469a-8684-a7f067fa5ace",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "",
+   "name": ""
+  },
+  "language_info": {
+   "name": ""
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

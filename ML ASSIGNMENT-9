@@ -1,0 +1,367 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "1872252b-fdf8-4257-a722-953a2465cb03",
+   "metadata": {},
+   "source": [
+    "1) What is feature engineering, and how does it work? Explain the various aspects of feature\n",
+    "engineering in depth."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dcbbb10d-91c6-4ceb-b9bf-28f6e34f0fe7",
+   "metadata": {},
+   "source": [
+    "Feature engineering is the process of selecting, creating, and transforming features from raw data to prepare them for use in machine learning models. It is a critical step in the data science workflow and can have a significant impact on the performance and accuracy of the resulting models.\n",
+    "\n",
+    "The process of feature engineering involves several key aspects, which are discussed in detail below:\n",
+    "\n",
+    "1) Feature selection: This involves identifying and selecting the most relevant features from the raw data to use in the model. This can be done using various techniques, including statistical tests, correlation analysis, and domain knowledge. The goal is to select a subset of features that are most informative and relevant to the problem at hand while minimizing redundancy and noise.\n",
+    "\n",
+    "2) Feature creation: This involves creating new features by combining or transforming the existing features. This can be done using various techniques such as normalization, standardization, logarithmic transformation, polynomial transformation, and PCA. The goal is to create new features that capture important information that may not be captured by the original features."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1e87c080-8d35-487a-bb9a-456455c40045",
+   "metadata": {},
+   "source": [
+    "2) What is feature selection, and how does it work? What is the aim of it? What are the various\n",
+    "methods of function selection?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "87ec9839-c677-487b-b373-bc70a2628456",
+   "metadata": {},
+   "source": [
+    "Feature selection is the process of selecting a subset of relevant features (variables, predictors) from a larger set of features in a dataset that are most important for building an accurate and efficient predictive model.\n",
+    "\n",
+    "The aim of feature selection is to improve the performance of a machine learning model by reducing the number of features and increasing its efficiency, reducing overfitting, and improving generalization.\n",
+    "\n",
+    "There are several methods of feature selection, which can be broadly categorized into three main categories:\n",
+    "\n",
+    "a) Filter methods: These methods use statistical tests to rank the features based on their correlation with the target variable. The most commonly used statistical tests include Pearson correlation, Chi-square test, ANOVA, and mutual information. The selected features are then used to build the model.\n",
+    "\n",
+    "b) Wrapper methods: These methods use a search algorithm to evaluate all possible combinations of features and select the best subset that produces the highest performance. The search algorithm can be forward selection, backward elimination, or a combination of both. Wrapper methods are computationally expensive and can lead to overfitting if not done carefully."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "70d11ae9-0340-4ce0-873b-3504d75b38c1",
+   "metadata": {},
+   "source": [
+    "3) Describe the function selection filter and wrapper approaches. State the pros and cons of each\n",
+    "approach?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "72e40548-ae15-4cfe-926d-a39c004c5e5e",
+   "metadata": {},
+   "source": [
+    "Filter and wrapper approaches are two methods used for feature selection in machine learning. They differ in their approach and have their own set of advantages and disadvantages.\n",
+    "\n",
+    "a) Filter approach:\n",
+    "The filter approach is a method of feature selection that evaluates the relevance of each feature independent of the machine learning algorithm used for the predictive model. This approach uses statistical tests to assign a score to each feature based on its correlation with the target variable. The features are then ranked according to their score, and the top-ranked features are selected for the model.\n",
+    "\n",
+    "Pros:\n",
+    "\n",
+    "1) Fast and efficient, as it does not involve building a model\n",
+    "2) Can be used as a pre-processing step for any machine learning algorithm\n",
+    "3) Eliminates irrelevant features, which can lead to improved model performance\n",
+    "4) Can handle high-dimensional datasets\n",
+    "\n",
+    "Cons:\n",
+    "\n",
+    "1) Does not consider the interaction between features\n",
+    "2) May not select the optimal subset of features for the specific model used\n",
+    "3) May eliminate important features that have a weak correlation with the target variable but are important in combination with other features\n",
+    "\n",
+    "b) Wrapper approach:\n",
+    "The wrapper approach is a method of feature selection that evaluates the performance of the machine learning algorithm with different subsets of features. This approach involves building a model for each subset of features and selecting the subset that produces the highest performance.\n",
+    "\n",
+    "Pros:\n",
+    "\n",
+    "1) Considers the interaction between features\n",
+    "2) Selects the optimal subset of features for the specific model used\n",
+    "3) Can improve the performance of the machine learning algorithm\n",
+    "\n",
+    "Cons:\n",
+    "\n",
+    "1) Computationally expensive, as it requires building multiple models\n",
+    "2) Prone to overfitting, as it can select a subset of features that perform well on the training set but poorly on the testing set\n",
+    "3) May not handle high-dimensional datasets well\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6f01021b-9922-4709-a8d2-40120922d743",
+   "metadata": {},
+   "source": [
+    "4) i. Describe the overall feature selection process.\n",
+    "\n",
+    "ii. Explain the key underlying principle of feature extraction using an example. What are the most\n",
+    "widely used function extraction algorithms?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1dd60af4-7fd0-4896-b5c5-820d22524d15",
+   "metadata": {},
+   "source": [
+    "i. Overall feature selection process:\n",
+    "\n",
+    "The feature selection process involves the following steps:\n",
+    "\n",
+    "a) Data Preprocessing: The first step is to preprocess the data, which includes cleaning, normalization, and encoding categorical variables.\n",
+    "\n",
+    "b) Feature Extraction: The next step is to extract features from the data. This can be done using domain knowledge or statistical methods.\n",
+    "\n",
+    "c) Feature Selection: The next step is to select a subset of relevant features from the extracted features. This can be done using filter, wrapper, or embedded methods.\n",
+    "\n",
+    "d) Model Building: The selected features are used to build a machine learning model using an appropriate algorithm.\n",
+    "\n",
+    "ii. Key underlying principle of feature extraction:\n",
+    "\n",
+    "Feature extraction is the process of transforming raw data into a set of features that can be used for machine learning. The key underlying principle of feature extraction is to identify and extract the most important information from the data, which can help in building an accurate and efficient predictive model.\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "abdfaaa4-bc81-4f96-bcd5-d07253c8c9ff",
+   "metadata": {},
+   "source": [
+    "5) Describe the feature engineering process in the sense of a text categorization issue."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ea304d4f-d73d-4bb7-b2c1-ddf700515d68",
+   "metadata": {},
+   "source": [
+    "Feature engineering is the process of selecting, extracting, and transforming relevant features from the raw data to improve the performance of a machine learning model. In the context of text categorization, the feature engineering process involves converting the unstructured text data into a structured format that can be used for machine learning.\n",
+    "\n",
+    "The following are the steps involved in the feature engineering process for a text categorization problem:\n",
+    "\n",
+    "a) Data Preprocessing: The first step is to preprocess the text data, which includes cleaning, tokenization, stop-word removal, stemming, and lemmatization. This step helps in removing noise and transforming the text into a structured format that can be used for feature extraction.\n",
+    "\n",
+    "b) Feature Extraction: The next step is to extract features from the preprocessed text data. There are several feature extraction techniques available for text data, such as Bag-of-Words, TF-IDF, Word Embeddings, and N-grams. The selected feature extraction technique should be appropriate for the problem at hand and the type of text data.\n",
+    "\n",
+    "c) Feature Selection: The next step is to select a subset of relevant features from the extracted features. This can be done using filter, wrapper, or embedded methods, depending on the size and complexity of the dataset and the machine learning algorithm used."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e23bc4d4-af6c-424e-be93-a8b42e5182d2",
+   "metadata": {},
+   "source": [
+    "6) What makes cosine similarity a good metric for text categorization? A document-term matrix has\n",
+    "two rows with values of (2, 3, 2, 0, 2, 3, 3, 0, 1) and (2, 1, 0, 0, 3, 2, 1, 3, 1). Find the resemblance in\n",
+    "cosine."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dcad61ed-eb52-429a-a3ce-85d840950465",
+   "metadata": {},
+   "source": [
+    "Cosine similarity is a popular metric for text categorization because it measures the similarity between two documents based on their content, rather than their length or position in the document. It is especially useful when dealing with high-dimensional sparse data, such as a document-term matrix, where most of the entries are zero. Cosine similarity is also scale-invariant, meaning that it is not affected by the magnitude of the values in the document-term matrix.\n",
+    "In the given document-term matrix, the two rows represent two documents. Let's denote them as vector a = (2, 3, 2, 0, 2, 3, 3, 0, 1) and vector b = (2, 1, 0, 0, 3, 2, 1, 3, 1). The dot product of a and b is:\n",
+    "\n",
+    "a.b = (22) + (31) + (20) + (00) + (23) + (32) + (31) + (03) + (1*1)\n",
+    "= 4 + 3 + 0 + 0 + 6 + 6 + 3 + 0 + 1\n",
+    "= 23\n",
+    "\n",
+    "The magnitude of vector a is:\n",
+    "\n",
+    "||a|| = sqrt((2^2) + (3^2) + (2^2) + (0^2) + (2^2) + (3^2) + (3^2) + (0^2) + (1^2))\n",
+    "= sqrt(4 + 9 + 4 + 0 + 4 + 9 + 9 + 0 + 1)\n",
+    "= sqrt(40)\n",
+    "= 6.3246\n",
+    "\n",
+    "The magnitude of vector b is:\n",
+    "\n",
+    "||b|| = sqrt((2^2) + (1^2) + (0^2) + (0^2) + (3^2) + (2^2) + (1^2) + (3^2) + (1^2))\n",
+    "= sqrt(4 + 1 + 0 + 0 + 9 + 4 + 1 + 9 + 1)\n",
+    "= sqrt(29)\n",
+    "= 5.3852\n",
+    "\n",
+    "Using the formula for cosine similarity, we get:\n",
+    "\n",
+    "cosine similarity = (a.b) / (||a|| * ||b||)\n",
+    "= 23 / (6.3246 * 5.3852)\n",
+    "= 0.7163\n",
+    "\n",
+    "Therefore, the resemblance in cosine between the two documents is 0.7163. This value is between 0 and 1, where 1 represents perfect similarity and 0 represents no similarity. Hence, the two documents are somewhat similar in terms of their content.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d02cb35f-f003-43e9-b399-e48208c6f064",
+   "metadata": {},
+   "source": [
+    "7) i. What is the formula for calculating Hamming distance? Between 10001011 and 11001111,\n",
+    "calculate the Hamming gap.\n",
+    "\n",
+    "ii. Compare the Jaccard index and similarity matching coefficient of two features with values (1, 1, 0,\n",
+    "0, 1, 0, 1, 1) and (1, 1, 0, 0, 0, 1, 1, 1), respectively (1, 0, 0, 1, 1, 0, 0, 1)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a23ebcf9-7e35-4c64-944c-4635fe731fa5",
+   "metadata": {},
+   "source": [
+    "i. The Hamming distance between two strings of equal length is the number of positions at which the corresponding symbols are different. The formula for calculating Hamming distance is:\n",
+    "\n",
+    "Hamming distance = number of positions where symbols are different\n",
+    "\n",
+    "Let's calculate the Hamming distance between 10001011 and 11001111:\n",
+    "\n",
+    "10001011\n",
+    "11001111\n",
+    "^ ^ ^\n",
+    "\n",
+    "There are three positions where the symbols are different, so the Hamming distance is 3.\n",
+    "\n",
+    "ii. The Jaccard index and the similarity matching coefficient are both measures of similarity between two sets of binary features. The Jaccard index is the ratio of the size of the intersection of the two sets to the size of their union, while the similarity matching coefficient is the ratio of the number of matching features to the total number of features.\n",
+    "\n",
+    "Let's calculate the Jaccard index and the similarity matching coefficient for the two sets of features:\n",
+    "\n",
+    "Set A: (1, 1, 0, 0, 1, 0, 1, 1)\n",
+    "Set B: (1, 1, 0, 0, 0, 1, 1, 1)\n",
+    "Matching features: (1, 1, 0, 0, 1, 0, 1, 1) AND (1, 1, 0, 0, 0, 1, 1, 1)\n",
+    "Total number of features: 8\n",
+    "\n",
+    "Jaccard index = size of intersection / size of union\n",
+    "= 6 / (8 + 8 - 6)\n",
+    "= 0.6\n",
+    "\n",
+    "Similarity matching coefficient = number of matching features / total number of features\n",
+    "= 8 / 8\n",
+    "= 1\n",
+    "\n",
+    "Therefore, the Jaccard index is 0.6, indicating moderate similarity between the two sets, and the similarity matching coefficient is 1, indicating perfect similarity between the two sets.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "59c36760-bbe4-40e1-a343-846ba2705ef2",
+   "metadata": {},
+   "source": [
+    "8) State what is meant by &quot;high-dimensional data set&quot;? Could you offer a few real-life examples?\n",
+    "What are the difficulties in using machine learning techniques on a data set with many dimensions?\n",
+    "What can be done about it?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "edf1fe6d-235d-4765-bfa6-638a8614e0b2",
+   "metadata": {},
+   "source": [
+    "A high-dimensional data set is one in which the number of features or variables is very large. In other words, each observation in the data set has a large number of attributes or dimensions associated with it. For example, an image can be represented as a high-dimensional data set, with each pixel being a feature or dimension.\n",
+    "\n",
+    "Real-life examples of high-dimensional data sets include:\n",
+    "\n",
+    "a) DNA sequencing data: each gene or base pair is a feature or dimension.\n",
+    "\n",
+    "b) Social media data: each user profile or post can have many attributes, such as age, gender, location, interests, etc.\n",
+    "\n",
+    "c) Sensor data: in IoT applications, sensors can generate data with many attributes, such as temperature, humidity, pressure, etc. \n",
+    "\n",
+    "Another difficulty is the risk of overfitting, where the model becomes too complex and fits the noise in the data, rather than the underlying patterns. This can be particularly problematic in high-dimensional data sets, where there may be many irrelevant or redundant features.\n",
+    "\n",
+    "To address these difficulties, several techniques can be used, including:\n",
+    "\n",
+    "a) Feature selection: selecting the most relevant features or reducing the dimensionality of the data set.\n",
+    "\n",
+    "b) Regularization: adding a penalty term to the loss function to discourage overfitting.\n",
+    "\n",
+    "c) Model selection: choosing a simpler model that is less prone to overfitting, such as a linear model instead of a non-linear model."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b37cca28-a08b-4977-a38f-37445677e854",
+   "metadata": {},
+   "source": [
+    "9) Make a few quick notes on:\n",
+    "\n",
+    "PCA is an acronym for Personal Computer Analysis.\n",
+    "\n",
+    "2. Use of vectors\n",
+    "\n",
+    "3. Embedded technique"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "60849048-5786-4a14-a24c-1fe062c4c9cb",
+   "metadata": {},
+   "source": [
+    "1) Principal Component Analysis (PCA) is a dimensionality reduction technique that identifies the most important variables in a dataset and transforms the data into a new coordinate system. It does this by finding the principal components, which are linear combinations of the original variables that capture the most variance in the data.\n",
+    "\n",
+    "2) Vectors are mathematical objects that have both magnitude and direction. They are commonly used in machine learning to represent data points and transformations. For example, in PCA, the data points are represented as vectors, and the principal components are also represented as vectors in the new coordinate system.\n",
+    "\n",
+    "3) Embedded techniques are machine learning algorithms that perform feature selection and model building simultaneously. These algorithms learn which features are most relevant to the prediction task and use them to build a model. Examples of embedded techniques include Lasso regression, which uses L1 regularization to select features, and tree-based methods such as Random Forests, which perform feature selection as part of the tree-building process."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "10c99d21-4297-4be5-a855-298ad37e2641",
+   "metadata": {},
+   "source": [
+    "10) Make a comparison between:\n",
+    "\n",
+    "1. Sequential backward exclusion vs. sequential forward selection\n",
+    "\n",
+    "2. Function selection methods: filter vs. wrapper\n",
+    "\n",
+    "3. SMC vs. Jaccard coefficient"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a6cf1e36-5ab8-40db-8103-a5f61183d117",
+   "metadata": {},
+   "source": [
+    "1) Sequential backward exclusion and sequential forward selection are both feature selection techniques used in machine learning. Sequential backward exclusion starts with all the features and eliminates them one at a time until the desired number of features is left. Sequential forward selection starts with no features and adds them one at a time until the desired number of features is reached. The main difference between the two methods is the direction of search. \n",
+    "\n",
+    "2) Filter and wrapper are two methods of feature selection. Filter methods evaluate the relevance of each feature independently of the model and select a subset of features based on a certain criterion, such as correlation or mutual information. Wrapper methods, on the other hand, use the performance of the model to evaluate the relevance of the features. \n",
+    "\n",
+    "3) SMC (Similarity Matching Coefficient) and Jaccard coefficient are two measures of similarity used in machine learning. SMC measures the proportion of features that are shared between two data points, while Jaccard coefficient measures the ratio of the number of common features to the number of features that are present in at least one of the data points. The main difference between the two measures is how they handle features that are absent in both data points. \n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a53e1347-6cae-4293-a404-5aee23f6147d",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "",
+   "name": ""
+  },
+  "language_info": {
+   "name": ""
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

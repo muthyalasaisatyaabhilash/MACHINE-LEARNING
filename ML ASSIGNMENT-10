@@ -1,0 +1,400 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "ce210204-8ea0-4d4c-996e-0ec015854190",
+   "metadata": {},
+   "source": [
+    "1) Define the Bayesian interpretation of probability."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b8841dad-22d1-47f9-81cc-68c072aca109",
+   "metadata": {},
+   "source": [
+    "The Bayesian interpretation of probability is a way of assigning probabilities to events or hypotheses based on prior knowledge and available evidence. It is named after the Reverend Thomas Bayes, an 18th-century English statistician and theologian.\n",
+    "\n",
+    "According to the Bayesian interpretation, probabilities are subjective degrees of belief, representing the level of confidence one has in a particular statement or hypothesis. In other words, probability is not an objective property of the world, but rather a measure of our uncertainty about it.\n",
+    "\n",
+    "In Bayesian inference, the probability of an event or hypothesis is updated based on new evidence or data. This is done using Bayes' theorem, which provides a mathematical formula for calculating the probability of a hypothesis given the available evidence. Bayes' theorem states that the posterior probability of a hypothesis is proportional to the product of its prior probability and the likelihood of the evidence given the hypothesis."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4831c484-4a40-4ccb-a406-bda0f4cbfd78",
+   "metadata": {},
+   "source": [
+    "2) Define probability of a union of two events with equation."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "10257449-e8bc-4795-bc63-a97f99eb068f",
+   "metadata": {},
+   "source": [
+    "The probability of the union of two events A and B, denoted as P(A ∪ B), is the probability that at least one of the events occurs. The formula to calculate the probability of the union of two events is:\n",
+    "\n",
+    "css\n",
+    "Copy code\n",
+    "P(A ∪ B) = P(A) + P(B) - P(A ∩ B)\n",
+    "where P(A) is the probability of event A occurring, P(B) is the probability of event B occurring, and P(A ∩ B) is the probability of both events A and B occurring simultaneously (i.e., the intersection of A and B).\n",
+    "\n",
+    "The reason for subtracting P(A ∩ B) from the sum of P(A) and P(B) is that the probability of the intersection is counted twice in the sum of P(A) and P(B), so we need to subtract it once to avoid double-counting.\n",
+    "\n",
+    "This formula can be extended to the union of any number of events by including all possible intersections of those events in the calculation.\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f870d18b-1557-4263-b6c2-facb162d44b2",
+   "metadata": {},
+   "source": [
+    "3) What is joint probability? What is its formula?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e9ca5232-1155-4100-9f8f-7eb415ba2bc8",
+   "metadata": {},
+   "source": [
+    "Joint probability is a measure of the probability of two or more events occurring together. Specifically, it is the probability of the intersection of two events A and B, denoted as P(A ∩ B). Joint probability is a fundamental concept in probability theory and is used in many areas, including statistics, machine learning, and data science.\n",
+    "\n",
+    "The formula to calculate the joint probability of two events A and B is:\n",
+    "\n",
+    "css\n",
+    "Copy code\n",
+    "P(A ∩ B) = P(A) × P(B|A)\n",
+    "where P(A) is the probability of event A occurring, and P(B|A) is the conditional probability of event B occurring given that event A has occurred. This formula can be rearranged using Bayes' theorem to obtain:\n",
+    "\n",
+    "css\n",
+    "Copy code\n",
+    "P(A ∩ B) = P(B) × P(A|B)\n",
+    "where P(B) is the probability of event B occurring, and P(A|B) is the conditional probability of event A occurring given that event B has occurred.\n",
+    "\n",
+    "The joint probability of more than two events can be calculated by multiplying the probabilities of all the events together, provided that the events are mutually independent. In other words, the occurrence of one event does not affect the probability of the other events occurring. If the events are not mutually independent, then the joint probability must be calculated using conditional probabilities.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3a64f6bd-6567-4e97-900a-1eb97cf26997",
+   "metadata": {},
+   "source": [
+    "4) What is chain rule of probability?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9eb5f691-8f3d-4715-b3c9-008f2fa0b055",
+   "metadata": {},
+   "source": [
+    "The chain rule of probability, also known as the product rule of probability, is a fundamental rule in probability theory that allows us to calculate the probability of a joint event by breaking it down into the probabilities of its individual components.\n",
+    "\n",
+    "The chain rule states that the probability of a joint event involving n events A1, A2, ..., An can be calculated as the product of the conditional probabilities of each event given the previous events:\n",
+    "\n",
+    "css\n",
+    "Copy code\n",
+    "P(A1 ∩ A2 ∩ ... ∩ An) = P(A1) × P(A2|A1) × P(A3|A1 ∩ A2) × ... × P(An|A1 ∩ A2 ∩ ... ∩ An-1)\n",
+    "where P(Ai|A1 ∩ A2 ∩ ... ∩ Ai-1) is the conditional probability of event Ai given that events A1, A2, ..., Ai-1 have occurred.\n",
+    "\n",
+    "In other words, we first calculate the probability of the first event A1, then the probability of the second event A2 given that A1 has occurred, and so on, until we have calculated the probability of the final event An given that A1, A2, ..., An-1 have all occurred.\n",
+    "\n",
+    "The chain rule is a powerful tool for calculating the probabilities of complex events that can be broken down into simpler components. It is widely used in statistics, machine learning, and other areas where probability is used to model real-world phenomena.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9cf752af-a217-48cd-897c-d993d247236d",
+   "metadata": {},
+   "source": [
+    "5) What is conditional probability means? What is the formula of it?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "88df4eaa-c3eb-45b0-ac17-80bfe5b76d63",
+   "metadata": {},
+   "source": [
+    "Conditional probability is the probability of an event A occurring given that another event B has occurred. It is denoted as P(A|B) and is read as \"the probability of A given B.\" The conditional probability of A given B is calculated as:\n",
+    "\n",
+    "css\n",
+    "Copy code\n",
+    "P(A|B) = P(A ∩ B) / P(B)\n",
+    "where P(A ∩ B) is the joint probability of A and B occurring together, and P(B) is the probability of event B occurring.\n",
+    "\n",
+    "In other words, the conditional probability of A given B is the proportion of times that event A occurs when event B has occurred. It represents the updated probability of event A, given the knowledge that event B has occurred.\n",
+    "\n",
+    "It is important to note that the conditional probability of A given B may be different from the unconditional probability of A, i.e., P(A) may not be equal to P(A|B). This is because the occurrence of event B may change the probability of event A."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c6eeadae-1c30-45d2-95d6-700404bb01c6",
+   "metadata": {},
+   "source": [
+    "6) What are continuous random variables?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "95d81d9e-4420-4a1b-8a92-58150d0bd706",
+   "metadata": {},
+   "source": [
+    "Continuous random variables are variables that can take on any value within a specified range, usually an interval on the real number line. They are used to model phenomena that can take on infinitely many values, such as time, distance, or temperature.\n",
+    "\n",
+    "Continuous random variables are characterized by a probability density function (PDF), which describes the relative likelihood of each value within the range of the variable. The PDF is a continuous function that integrates to 1 over the range of the variable, and the area under the curve between two values represents the probability of the variable taking on a value within that interval.\n",
+    "\n",
+    "Examples of continuous random variables include the time it takes for a bus to arrive, the distance a ball travels when thrown, or the temperature in a room."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a6f1f63b-91ce-4c49-94bb-30b867c59f9e",
+   "metadata": {},
+   "source": [
+    "7) What are Bernoulli distributions? What is the formula of it?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "23bb9420-89b0-42c9-a65a-cb9fe005485a",
+   "metadata": {},
+   "source": [
+    "The Bernoulli distribution is a probability distribution that models the outcomes of a single binary experiment or trial, where the result is either success or failure. It is named after Swiss mathematician Jacob Bernoulli, who first studied it in the 18th century.\n",
+    "\n",
+    "The Bernoulli distribution is characterized by a single parameter, p, which is the probability of success in a single trial. The probability mass function (PMF) of a Bernoulli random variable X, which takes the value 1 for success and 0 for failure, is given by:\n",
+    "\n",
+    "css\n",
+    "Copy code\n",
+    "P(X = 1) = p\n",
+    "P(X = 0) = 1 - p\n",
+    "The PMF of a Bernoulli distribution can also be written more compactly as:\n",
+    "\n",
+    "css\n",
+    "Copy code\n",
+    "P(X = x) = p^x * (1 - p)^(1-x)\n",
+    "where x = 0 or 1.\n",
+    "\n",
+    "The mean or expected value of a Bernoulli distribution is given by:\n",
+    "\n",
+    "css\n",
+    "Copy code\n",
+    "E[X] = p\n",
+    "and the variance is given by:\n",
+    "\n",
+    "css\n",
+    "Copy code\n",
+    "Var[X] = p(1-p)\n",
+    "The Bernoulli distribution is a special case of the binomial distribution, which models the number of successes in a fixed number of independent Bernoulli trials. The Bernoulli distribution is often used as a building block in more complex probability models and is widely used in many areas, including statistics, machine learning, and data science.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "69e7b175-b4c3-43a9-8eaf-959169098b33",
+   "metadata": {},
+   "source": [
+    "8) What is binomial distribution? What is the formula?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5068d822-55ad-47a5-8797-27dafe5d3980",
+   "metadata": {},
+   "source": [
+    "The binomial distribution is a probability distribution that models the number of successes in a fixed number of independent Bernoulli trials. It is named after Swiss mathematician Jacob Bernoulli, who first studied it in the 18th century.\n",
+    "\n",
+    "The binomial distribution is characterized by two parameters: n, the number of trials, and p, the probability of success in a single trial. The probability mass function (PMF) of a binomial random variable X, which represents the number of successes in n trials, is given by:\n",
+    "\n",
+    "scss\n",
+    "Copy code\n",
+    "P(X = k) = (n choose k) * p^k * (1 - p)^(n-k)\n",
+    "where k = 0, 1, ..., n, and (n choose k) is the binomial coefficient, which represents the number of ways to choose k items from a set of n items.\n",
+    "\n",
+    "The mean or expected value of a binomial distribution is given by:\n",
+    "\n",
+    "css\n",
+    "Copy code\n",
+    "E[X] = np\n",
+    "\n",
+    "and the variance is given by:\n",
+    "\n",
+    "css\n",
+    "Copy code\n",
+    "Var[X] = np(1-p)\n",
+    "\n",
+    "The binomial distribution is widely used in many areas, including statistics, machine learning, and data science, to model phenomena that involve a fixed number of independent trials, each of which can have only two outcomes (success or failure). Examples include the number of heads obtained in a fixed number of coin tosses, the number of defective items in a fixed-size sample, or the number of successful trades in a fixed number of stock market transactions.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "df4486ef-668c-4851-bebd-d64535d7d325",
+   "metadata": {},
+   "source": [
+    "9) What is Poisson distribution? What is the formula?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e71d31ec-24da-460d-8bde-6c4b1df52c02",
+   "metadata": {},
+   "source": [
+    "The Poisson distribution is a probability distribution that models the number of occurrences of a rare event in a fixed interval of time or space. It is named after French mathematician Siméon Denis Poisson, who first studied it in the 19th century.\n",
+    "\n",
+    "The Poisson distribution is characterized by a single parameter, λ, which represents the expected number of occurrences of the event in the interval. The probability mass function (PMF) of a Poisson random variable X, which represents the number of occurrences of the event in the interval, is given by:\n",
+    "\n",
+    "scss\n",
+    "Copy code\n",
+    "P(X = k) = (e^(-λ) * λ^k) / k!\n",
+    "where k = 0, 1, 2, ..., and e is the mathematical constant approximately equal to 2.71828.\n",
+    "\n",
+    "The mean or expected value of a Poisson distribution is given by:\n",
+    "\n",
+    "css\n",
+    "Copy code\n",
+    "E[X] = λ\n",
+    "\n",
+    "and the variance is also λ.\n",
+    "\n",
+    "The Poisson distribution is widely used in many areas, including physics, engineering, biology, finance, and more, to model phenomena that involve rare events occurring randomly in time or space. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f8d36a2e-9e11-481d-b06f-4478ecd35e71",
+   "metadata": {},
+   "source": [
+    "10) Define covariance."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d3bbdd14-0825-4b39-89f5-f37877b1e10e",
+   "metadata": {},
+   "source": [
+    "Covariance is a statistical measure that describes the relationship between two random variables. Specifically, it measures how much two variables change together, or how much they vary in relation to each other.\n",
+    "\n",
+    "The covariance between two random variables X and Y is defined as the expected value of their product minus the product of their expected values:\n",
+    "\n",
+    "scss\n",
+    "Copy code\n",
+    "Cov(X, Y) = E[(X - E[X]) * (Y - E[Y])]\n",
+    "\n",
+    "where E[X] and E[Y] are the expected values of X and Y, respectively. The covariance can be positive, indicating that X and Y tend to increase or decrease together, or negative, indicating that they tend to move in opposite directions. A covariance of zero indicates that there is no linear relationship between the two variables.\n",
+    "\n",
+    "Covariance is a useful tool in statistics and data analysis because it can provide insights into the relationship between two variables. However, it can be difficult to interpret because it depends on the scale of the variables and can be affected by outliers. Therefore, it is often used in conjunction with other statistical measures, such as correlation coefficient, to gain a more complete understanding of the relationship between two variables.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "885e5c0a-527f-4d46-9dcc-08aaacbc9c78",
+   "metadata": {},
+   "source": [
+    "11) Define correlation"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "34668dcb-f370-4d2c-9504-1f23a4de217b",
+   "metadata": {},
+   "source": [
+    "Correlation is a statistical measure that describes the relationship between two random variables. Specifically, it measures the strength and direction of a linear relationship between two variables.\n",
+    "\n",
+    "The correlation coefficient between two random variables X and Y is defined as the covariance between X and Y divided by the product of their standard deviations:\n",
+    "\n",
+    "scss\n",
+    "Copy code\n",
+    "Corr(X, Y) = Cov(X, Y) / (SD[X] * SD[Y])\n",
+    "where Cov(X, Y) is the covariance between X and Y, and SD[X] and SD[Y] are the standard deviations of X and Y, respectively. The correlation coefficient ranges from -1 to 1, where a value of -1 indicates a perfect negative correlation, a value of 0 indicates no correlation, and a value of 1 indicates a perfect positive correlation."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a88aa134-c1cd-4681-af30-04c9abafe95d",
+   "metadata": {},
+   "source": [
+    "12) Define sampling with replacement. Give example."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ff887465-2787-43cc-ac70-30d881827be8",
+   "metadata": {},
+   "source": [
+    "ampling with replacement is a statistical method of selecting a sample from a larger population, where each member of the population has an equal chance of being selected, and where each selection is independent of the previous selections. In sampling with replacement, each member of the population remains in the population after it has been selected, and can be selected again in subsequent samples.\n",
+    "\n",
+    "For example, suppose we have a bag containing 10 balls, numbered from 1 to 10. We want to select a sample of 3 balls from the bag using sampling with replacement. We randomly select a ball from the bag, record its number, and return it to the bag. We repeat this process 2 more times, each time selecting a ball at random, recording its number, and returning it to the bag. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1b459f70-f25a-4f38-98ba-041354e0b92a",
+   "metadata": {},
+   "source": [
+    "13) What is sampling without replacement? Give example."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "29c57422-9e66-4aa2-90a4-0e1555a9fc5f",
+   "metadata": {},
+   "source": [
+    "Sampling without replacement is a method of selecting a sample from a population where each member of the population has an equal chance of being selected, but once a member is chosen, it is removed from the population and cannot be chosen again.\n",
+    "\n",
+    "For example, let's say you have a bag with 10 different colored marbles: 3 red, 4 blue, and 3 green. If you wanted to select a sample of 2 marbles without replacement, you would first randomly select one marble from the bag. Let's say you select a blue marble. You would then remove the blue marble from the bag, leaving you with 9 marbles (2 red, 3 blue, and 2 green).\n",
+    "\n",
+    "The key difference between sampling with and without replacement is that when you sample with replacement, each member of the population has an equal chance of being selected for each draw, even if they were already selected in previous draws. When sampling without replacement, the probability of each member being selected changes after each draw, as the number of remaining members in the population changes."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "43762908-34ee-44b2-b4d0-ff7cd1db3104",
+   "metadata": {},
+   "source": [
+    "14) What is hypothesis? Give example."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "359bd737-f779-45aa-8ccf-8522080b2ba4",
+   "metadata": {},
+   "source": [
+    "A hypothesis is a proposed explanation for a phenomenon or a prediction about a relationship between variables, which can be tested through observation, experimentation, or statistical analysis. A hypothesis is typically based on prior knowledge or observations and is used to guide further research or investigation.\n",
+    "\n",
+    "Here is an example of a hypothesis:\n",
+    "\n",
+    "\"Regular exercise leads to improved cardiovascular health.\"\n",
+    "\n",
+    "This hypothesis suggests that there is a relationship between regular exercise and cardiovascular health. It could be tested by collecting data on a sample of people who engage in regular exercise and comparing their cardiovascular health outcomes to those who do not engage in regular exercise. The hypothesis could be supported or rejected based on the results of the study.\n",
+    "\n",
+    "It is important to note that a hypothesis is not necessarily true or false, but rather a proposed explanation or prediction that needs to be tested and evaluated based on evidence. If the evidence supports the hypothesis, it may be considered a plausible explanation or prediction, but if the evidence does not support it, the hypothesis may need to be revised or rejected.\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ac8cb343-9501-4b00-860d-ecd8051e643a",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "",
+   "name": ""
+  },
+  "language_info": {
+   "name": ""
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

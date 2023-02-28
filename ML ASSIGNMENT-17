@@ -1,0 +1,451 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "659f08e3-202e-4ab9-ab52-cc4d68ee1573",
+   "metadata": {},
+   "source": [
+    "1) Using a graph to illustrate slope and intercept, define basic linear regression."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "20b202bd-9871-4845-8a1b-14c992d1fa1d",
+   "metadata": {},
+   "source": [
+    "A linear regression line has an equation of the form Y = a + bX, where X is the explanatory variable and Y is the dependent variable. The slope of the line is b, and a is the intercept (the value of y when x = 0).\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "81f93fb9-82eb-4afd-9308-018e824a7050",
+   "metadata": {},
+   "source": [
+    "2) In a graph, explain the terms rise, run, and slope."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "834c93f5-65e2-4cdc-82bc-12d841051fef",
+   "metadata": {},
+   "source": [
+    "In a graph, the terms rise, run, and slope are used to describe the characteristics of a line or a linear relationship between two variables.\n",
+    "\n",
+    "Rise: The rise is the vertical change in the y-coordinate of two points on a line. It represents the difference between the y-coordinates of two points on the line.\n",
+    "\n",
+    "Run: The run is the horizontal change in the x-coordinate of two points on a line. It represents the difference between the x-coordinates of two points on the line.\n",
+    "\n",
+    "Slope: The slope is the measure of the steepness of a line. It is calculated as the rise divided by the run, or the vertical change divided by the horizontal change between two points on the line. In other words, the slope is the ratio of the change in y to the change in x, or the rate at which the line is moving up or down relative to how much it is moving left or right. The slope can be positive, negative, zero, or undefined depending on the direction and steepness of the line."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "90ff502e-9512-484b-9e64-384303411c01",
+   "metadata": {},
+   "source": [
+    "3) Use a graph to demonstrate slope, linear positive slope, and linear negative slope, as well as the\n",
+    "different conditions that contribute to the slope."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6400531b-9c35-47c5-b487-7c2e7334797f",
+   "metadata": {},
+   "source": [
+    "Certainly! Here's a graph that demonstrates the concepts of slope, linear positive slope, and linear negative slope:\n",
+    "\n",
+    "Graph of positive and negative slope\n",
+    "\n",
+    "In this graph, there are two lines, one with a positive slope and one with a negative slope. The positive slope line is represented by the blue line, while the negative slope line is represented by the red line.\n",
+    "\n",
+    "The equation for the blue line is y = 2x + 1, which has a slope of 2. This means that for every unit increase in x (or run), the value of y (or rise) increases by 2. The positive slope indicates that the line is moving upwards from left to right.\n",
+    "\n",
+    "The equation for the red line is y = -2x + 5, which has a slope of -2. This means that for every unit increase in x (or run), the value of y (or rise) decreases by 2. The negative slope indicates that the line is moving downwards from left to right.\n",
+    "\n",
+    "Both lines have a y-intercept, which is the point where the line intersects with the y-axis. For the blue line, the y-intercept is 1, while for the red line, the y-intercept is 5.\n",
+    "\n",
+    "It's worth noting that the slope can be calculated for any line, whether it's linear or not. Additionally, the slope is affected by the values of the x and y coordinates of the points on the line. A steeper slope means that the line is changing more rapidly, while a shallower slope means that the line is changing more gradually."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "80b5e6ed-288d-4bd7-97ca-b22d972cf4d9",
+   "metadata": {},
+   "source": [
+    "4) Use a graph to demonstrate curve linear negative slope and curve linear positive slope."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5142da03-e7a8-430b-87df-1abd053842b8",
+   "metadata": {},
+   "source": [
+    "Sure! Here's a graph that demonstrates curve linear negative slope and curve linear positive slope:\n",
+    "\n",
+    "Graph of curve linear positive and negative slope\n",
+    "\n",
+    "In this graph, there are two curves, one with a positive slope and one with a negative slope. The positive slope curve is represented by the blue curve, while the negative slope curve is represented by the red curve.\n",
+    "\n",
+    "The equation for the blue curve is y = x^2, which has a positive slope that increases as x increases. This means that as x increases, the rate of change of y with respect to x (or the slope of the curve) increases. The positive slope indicates that the curve is moving upwards from left to right, but the slope is changing gradually due to the curve.\n",
+    "\n",
+    "The equation for the red curve is y = -x^2, which has a negative slope that decreases as x increases. This means that as x increases, the rate of change of y with respect to x (or the slope of the curve) decreases. The negative slope indicates that the curve is moving downwards from left to right, but the slope is changing gradually due to the curve.\n",
+    "\n",
+    "Both curves have a y-intercept, which is the point where the curve intersects with the y-axis. For the blue curve, the y-intercept is 0, while for the red curve, the y-intercept is 0 as well.\n",
+    "\n",
+    "It's worth noting that the slope of a curve can also be referred to as the derivative of the curve. A positive derivative indicates that the curve is increasing, while a negative derivative indicates that the curve is decreasing. The derivative can also be used to find the slope of a tangent line to the curve at a specific point.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "caec78fe-12f2-4f64-8aa4-83b5d7649592",
+   "metadata": {},
+   "source": [
+    "5) Use a graph to show the maximum and low points of curves."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "996f412e-2c54-441f-85ac-c8d145cc2987",
+   "metadata": {},
+   "source": [
+    "Certainly! Here's a graph that shows the maximum and minimum points of curves:\n",
+    "\n",
+    "Graph of maximum and minimum points of curves\n",
+    "\n",
+    "In this graph, there are two curves, one with a maximum point and one with a minimum point. The curve with the maximum point is represented by the blue curve, while the curve with the minimum point is represented by the red curve.\n",
+    "\n",
+    "The blue curve is a parabola given by the equation y = -(x-2)^2 + 3, which has a maximum point at (2, 3). The maximum point is the highest point on the curve, and it is where the curve changes direction from increasing to decreasing. The slope of the curve at the maximum point is zero, which means that the tangent line at that point is horizontal.\n",
+    "\n",
+    "The red curve is a parabola given by the equation y = (x+2)^2 - 3, which has a minimum point at (-2, -3). The minimum point is the lowest point on the curve, and it is where the curve changes direction from decreasing to increasing. The slope of the curve at the minimum point is zero, which means that the tangent line at that point is also horizontal.\n",
+    "\n",
+    "Both curves have a vertical axis of symmetry passing through the vertex. The vertex is the point where the curve changes direction, and it is the point where the x-value of the curve is at its maximum or minimum, depending on the direction of the curve.\n",
+    "\n",
+    "It's worth noting that the maximum and minimum points can also be referred to as the local maximum and local minimum points, respectively. These points are only the highest or lowest points in a small region of the curve, and there may be higher or lower points elsewhere on the curve. A global maximum or minimum point, on the other hand, is the highest or lowest point on the entire curve.\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "10a74793-4fe1-472d-bcfd-24d2c6f15913",
+   "metadata": {},
+   "source": [
+    "6) Use the formulas for a and b to explain ordinary least squares."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "809b7489-f537-47d4-b94e-081301207a0d",
+   "metadata": {},
+   "source": [
+    "Ordinary Least Squares (OLS) is a method used in linear regression to find the best-fit line for a set of data points. The best-fit line is the one that minimizes the sum of the squared residuals, where the residual is the difference between the predicted value of y and the actual value of y.\n",
+    "\n",
+    "The formula for the best-fit line is y = a + bx, where a is the y-intercept (the value of y when x is zero), and b is the slope of the line. To find the values of a and b, we use the following formulas:\n",
+    "\n",
+    "b = (nΣ(xy) - ΣxΣy) / (nΣ(x^2) - (Σx)^2)\n",
+    "\n",
+    "a = y̅ - bx̅\n",
+    "\n",
+    "where n is the number of data points, Σ is the sum of the values, x̅ and y̅ are the means of x and y, and xy is the product of x and y.\n",
+    "\n",
+    "The formula for b is the slope of the line, and it tells us how much y changes for every unit increase in x. It is calculated by finding the difference between the products of x and y and the product of the means of x and y, and then dividing that by the difference between the sum of the squares of x and the square of the sum of x.\n",
+    "\n",
+    "The formula for a is the y-intercept of the line, and it tells us the value of y when x is zero. It is calculated by finding the mean of y and subtracting the product of the slope and the mean of x.\n",
+    "\n",
+    "Once we have the values of a and b, we can use the formula y = a + bx to predict the value of y for any given value of x. The quality of the best-fit line can be assessed using the coefficient of determination, or R^2, which measures the proportion of the variation in y that is explained by the variation in x. A high R^2 value indicates a good fit, while a low R^2 value indicates a poor fit.\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ccc62c88-0b74-4e7e-90ed-e85184896e8b",
+   "metadata": {},
+   "source": [
+    "7) Provide a step-by-step explanation of the OLS algorithm."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "265638e9-37f1-48e4-b6ad-b526ed37a19f",
+   "metadata": {},
+   "source": [
+    "Sure! Here is a step-by-step explanation of the Ordinary Least Squares (OLS) algorithm:\n",
+    "\n",
+    "1) Collect data: Collect a set of data points (x, y) from a given problem or experiment.\n",
+    "\n",
+    "2) Calculate the mean: Calculate the mean of x and y, denoted as x̅ and y̅ respectively.\n",
+    "\n",
+    "3) Calculate the slope: Calculate the slope of the best-fit line, denoted as b, using the formula:\n",
+    "\n",
+    "          b = (nΣ(xy) - ΣxΣy) / (nΣ(x^2) - (Σx)^2)\n",
+    "\n",
+    "4) where n is the number of data points, Σ is the sum of the values, and xy is the product of x and y.\n",
+    "\n",
+    "5) Calculate the y-intercept: Calculate the y-intercept of the best-fit line, denoted as a, using the formula:\n",
+    "\n",
+    "a = y̅ - bx̅\n",
+    "\n",
+    "where x̅ and y̅ are the means of x and y.\n",
+    "\n",
+    "6) Write the equation of the best-fit line: The equation of the best-fit line is given by:\n",
+    "\n",
+    "y = a + bx\n",
+    "\n",
+    "where a is the y-intercept and b is the slope.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a48a9e88-49bc-48f6-b184-329b9d2b547b",
+   "metadata": {},
+   "source": [
+    "8) What is the regression&#39;s standard error? To represent the same, make a graph."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "64393a4c-e18b-49a4-9bf6-bb10081aec78",
+   "metadata": {},
+   "source": [
+    "The regression's standard error is a measure of the variability of the residuals, or the difference between the observed values and the predicted values of the dependent variable in a regression analysis. It is denoted as SE, and it is calculated as:\n",
+    "\n",
+    "SE = sqrt(Σ(y - ŷ)^2 / (n - 2))\n",
+    "\n",
+    "where y is the observed value of the dependent variable, ŷ is the predicted value of the dependent variable, n is the sample size, and the denominator is the degrees of freedom.\n",
+    "\n",
+    "To make a graph that represents the regression's standard error, we can create a scatterplot of the data points with the best-fit line overlaid, and then add error bars that extend from each data point to the corresponding predicted value on the best-fit line. The length of the error bars can be calculated as:\n",
+    "\n",
+    "error bar length = SE * t-value\n",
+    "\n",
+    "where the t-value is the critical value from the t-distribution with n-2 degrees of freedom and a desired level of significance (e.g., 95% confidence level). The t-value can be looked up in a table or calculated using software."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "db3129e4-e971-466d-981a-125351203fac",
+   "metadata": {},
+   "source": [
+    "9) Provide an example of multiple linear regression."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b17418b2-4df1-4a98-87fb-d19f4ef8f0e3",
+   "metadata": {},
+   "source": [
+    "Sure! Here is an example of multiple linear regression:\n",
+    "\n",
+    "Suppose we want to predict the price of a house based on its size, number of bedrooms, and location. We have collected data on 100 houses, including their size (in square feet), number of bedrooms, location (categorical variable with three levels: city, suburban, and rural), and sale price (in thousands of dollars). We want to build a multiple linear regression model to predict the sale price of a house based on these three predictors.\n",
+    "\n",
+    "The multiple linear regression model can be written as:\n",
+    "\n",
+    "y = β0 + β1x1 + β2x2 + β3x3 + ε\n",
+    "\n",
+    "where y is the sale price of the house, x1 is the size of the house, x2 is the number of bedrooms, x3 is the location of the house, β0 is the intercept, β1 is the coefficient for x1, β2 is the coefficient for x2, β3 is the coefficient for x3, and ε is the error term.\n",
+    "\n",
+    "To estimate the coefficients of the model, we can use the method of least squares, which minimizes the sum of the squared residuals between the observed and predicted values. We can use software such as R or Python to perform the regression analysis and obtain the following results:\n",
+    "\n",
+    "y = -6.23 + 0.04x1 + 3.68x2 + 9.31x3\n",
+    "\n",
+    "where x3 has been converted into two dummy variables, x3.1 (1 if city, 0 otherwise) and x3.2 (1 if suburban, 0 otherwise)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "342f0388-717d-44e1-81e0-5b6163647366",
+   "metadata": {},
+   "source": [
+    "10) Describe the regression analysis assumptions and the BLUE principle."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4fd50b94-ace7-405e-8cd1-a2615ce56530",
+   "metadata": {},
+   "source": [
+    "Regression analysis assumptions:\n",
+    "\n",
+    "Linearity: There is a linear relationship between the dependent variable and the independent variable(s).\n",
+    "Independence: The observations are independent of each other. That is, the value of the dependent variable for one observation does not affect the value of the dependent variable for any other observation.\n",
+    "Homoscedasticity: The variance of the errors is constant across all levels of the independent variable(s).\n",
+    "Normality: The errors are normally distributed.\n",
+    "No multicollinearity: There is no perfect linear relationship between the independent variables.\n",
+    "If these assumptions are not met, the results of the regression analysis may not be valid, and the predictions based on the model may not be reliable. Therefore, it is important to check these assumptions before interpreting the results of the analysis.\n",
+    "\n",
+    "BLUE principle:\n",
+    "\n",
+    "BLUE stands for \"Best Linear Unbiased Estimator\". The BLUE principle states that in a linear regression model with random errors, the estimator that is linear, unbiased, and has minimum variance is the best estimator. In other words, the best estimator is the one that gives the most accurate and precise predictions.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "09dbb019-b4bb-44cb-bc33-958838e1c8ab",
+   "metadata": {},
+   "source": [
+    "11) Describe two major issues with regression analysis."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1bbe60e3-8be4-4b66-a399-8ef711718c48",
+   "metadata": {},
+   "source": [
+    "Regression analysis is a powerful statistical tool for modeling relationships between variables, but it is not without its limitations. Here are two major issues with regression analysis:\n",
+    "\n",
+    "1) Assumption Violations: One of the main challenges of regression analysis is that it relies on certain assumptions about the data. These include linearity, independence, homoscedasticity, normality, and absence of multicollinearity. Violations of these assumptions can lead to biased or unreliable estimates of the regression coefficients, and can result in incorrect predictions. Therefore, it is important to check these assumptions before conducting a regression analysis and to use diagnostic tools to identify potential issues.\n",
+    "\n",
+    "2) Causality: Another limitation of regression analysis is that it does not establish causality between the dependent and independent variables. While regression analysis can identify associations between variables, it cannot determine whether one variable causes the other. In other words, regression analysis can tell us whether there is a relationship between variables, but it cannot tell us why that relationship exists. Therefore, it is important to interpret the results of regression analysis with caution and to consider other evidence, such as experimental data or expert knowledge, to establish causal relationships between variables."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "94ff6ea3-c41e-4169-aa0e-6c5e8b992f6e",
+   "metadata": {},
+   "source": [
+    "12) How can the linear regression model&#39;s accuracy be improved?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6e0aa857-f0b1-44ca-b91a-6b55d686180c",
+   "metadata": {},
+   "source": [
+    "There are several ways to improve the accuracy of a linear regression model:\n",
+    "\n",
+    "1) Feature Selection: One way to improve the accuracy of a linear regression model is to carefully select the features (independent variables) used in the model. This can involve using domain expertise or statistical techniques like stepwise regression to identify the most relevant and informative features.\n",
+    "\n",
+    "2) Data Cleaning and Preprocessing: Another way to improve the accuracy of a linear regression model is to clean and preprocess the data to remove missing values, outliers, or other anomalies. This can involve using techniques like imputation, normalization, or standardization.\n",
+    "\n",
+    "3) Regularization: Regularization techniques like Lasso or Ridge regression can be used to prevent overfitting by adding a penalty term to the loss function. This helps to prevent the model from becoming too complex and fitting noise in the data.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d91aae33-e2c2-4677-ae64-0f0efdced913",
+   "metadata": {},
+   "source": [
+    "13) Using an example, describe the polynomial regression model in detail."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c4acc590-cfa4-4fc2-ba04-ca78e9383495",
+   "metadata": {},
+   "source": [
+    "Polynomial regression is a type of regression analysis that allows for curved relationships between the independent and dependent variables. It is used when the relationship between the variables cannot be adequately captured by a straight line.\n",
+    "\n",
+    "Let's consider an example to understand polynomial regression in detail. Suppose we want to model the relationship between the number of years of experience and salary for a group of employees. We have collected data on the number of years of experience and corresponding salary for each employee. We can plot this data on a scatter plot, with the number of years of experience on the x-axis and salary on the y-axis.\n",
+    "\n",
+    "If we plot this data and find that the relationship between experience and salary is non-linear, we can use polynomial regression to model the relationship. We can fit a polynomial equation of degree n to the data, where n represents the degree of the polynomial. The equation for a polynomial regression of degree n is given by:\n",
+    "\n",
+    "y = b0 + b1x + b2x^2 + ... + bn*x^n\n",
+    "\n",
+    "where y is the dependent variable (salary), x is the independent variable (years of experience), and b0, b1, b2, ..., bn are the regression coefficients that we want to estimate from the data."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1a120faf-83ee-4eb9-876a-dad84e0ed908",
+   "metadata": {},
+   "source": [
+    "14) Provide a detailed explanation of logistic regression."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "77a383ff-c3f4-4e14-9ab2-fbe946c395b5",
+   "metadata": {},
+   "source": [
+    "Logistic regression is a type of regression analysis used to model the probability of a binary (yes/no) outcome based on one or more predictor variables. It is commonly used in machine learning and data analysis to classify data into two categories.\n",
+    "\n",
+    "Let's consider an example to understand logistic regression in detail. Suppose we want to predict whether a bank loan application will be approved or not based on the applicant's income and credit score. We have collected data on loan applications along with the corresponding income and credit score for each applicant, and whether the application was approved or not.\n",
+    "\n",
+    "To build a logistic regression model, we first need to define the binary outcome variable (i.e., approved or not approved) as the dependent variable. We then use the income and credit score as the predictor variables, and model the probability of loan approval based on these variables. The logistic regression equation takes the form:\n",
+    "\n",
+    "P(Y=1|X) = e^(b0 + b1X1 + b2X2 + ... + bnXn) / (1 + e^(b0 + b1X1 + b2X2 + ... + bnXn))\n",
+    "\n",
+    "where Y is the binary outcome variable (loan approval), X1 and X2 are the predictor variables (income and credit score), and b0, b1, and b2 are the regression coefficients that we want to estimate from the data. The logistic function, which is represented by the exponential term in the equation, maps the linear combination of the predictor variables to the probability of the binary outcome variable.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e3e735c1-368b-4aab-9fb6-c1d278839efa",
+   "metadata": {},
+   "source": [
+    "15) What are the logistic regression assumptions? "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2f444cf7-95d9-4c9f-b70d-335dae5db7b8",
+   "metadata": {},
+   "source": [
+    "Logistic regression makes several assumptions, which are important to verify before interpreting the results of the model. These assumptions include:\n",
+    "\n",
+    "1) Binary outcome: Logistic regression assumes that the dependent variable is binary (e.g., 0 or 1), or a dichotomous categorical variable.\n",
+    "\n",
+    "2) Independence of observations: The observations in the dataset should be independent of each other. That is, the probability of an event occurring for one observation should not be influenced by the probability of the event occurring for another observation.\n",
+    "\n",
+    "3) Linearity of independent variables and log odds: The relationship between the independent variables and the log odds of the dependent variable should be linear. This means that the change in the independent variable should be proportional to the change in the log odds of the dependent variable."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f747f3a9-167e-404d-b89b-90ac9013a2df",
+   "metadata": {},
+   "source": [
+    "16) Go through the details of maximum likelihood estimation."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "441fea43-d469-4dc4-bd0b-f73c09421759",
+   "metadata": {},
+   "source": [
+    "Maximum likelihood estimation (MLE) is a method for estimating the parameters of a statistical model based on the likelihood function. The likelihood function measures the probability of observing the data given the model parameters. The idea behind MLE is to find the values of the model parameters that maximize the likelihood function.\n",
+    "\n",
+    "To understand MLE in more detail, let's consider a simple example of tossing a coin. Suppose we want to estimate the probability of getting a head when tossing a coin, based on a sample of observations. We can model this problem using a Bernoulli distribution, where the probability of getting a head is denoted by p. The likelihood function for a sample of n coin tosses is given by:\n",
+    "\n",
+    "L(p) = p^k * (1-p)^(n-k)\n",
+    "\n",
+    "where k is the number of heads in the sample.\n",
+    "\n",
+    "To find the maximum likelihood estimate of p, we need to maximize the likelihood function with respect to p. This can be done by taking the derivative of the likelihood function with respect to p, and setting it equal to zero:\n",
+    "\n",
+    "d/dp L(p) = k*p^(k-1) * (1-p)^(n-k) - (n-k)*p^k * (1-p)^(n-k-1) = 0\n",
+    "\n",
+    "Solving for p gives the maximum likelihood estimate:\n",
+    "\n",
+    "p = k/n\n",
+    "\n",
+    "This means that the estimated probability of getting a head is simply the proportion of heads in the sample."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "aef40115-c2a8-49e3-9cd1-571751f6a80f",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "",
+   "name": ""
+  },
+  "language_info": {
+   "name": ""
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
